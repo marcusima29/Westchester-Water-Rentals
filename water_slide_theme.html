@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
 <head>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google Analytics - Replace with actual tracking ID when available -->
+  <!-- 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'YOUR_TRACKING_ID');
   </script>
+  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <title>Westchester Water Rentals</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" integrity="sha512-1t1f/W7rxkZOvS5wRmb4FgCNMN8cL2QOVEEZZmz1pDY6fzUUAkrCDxV+qU3n0zJF0HDl1l2fgcgOgTvwRu6h+A==" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
   <script>
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
@@ -94,7 +100,7 @@
   <meta name="twitter:description" content="Book premium water slides for parties, college events, and summer fun.">
   <meta name="twitter:image" content="https://i.imgur.com/zepyQvg.jpeg">
 </head>
-<body class="bg-white text-black dark:bg-gray-950 dark:text-white pt-24 transition-colors duration-500">
+<body class="bg-white text-black dark:bg-gray-950 dark:text-white pt-24 transition-colors duration-500" role="document">
 <a href="#main" class="sr-only focus:not-sr-only bg-blue-600 text-white px-4 py-2">Skip to content</a>
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 border-b border-gray-200 shadow-md flex items-center justify-between px-8 py-6 text-black dark:text-white">
@@ -106,17 +112,19 @@
     </div>
   </div>
   <div class="flex items-center space-x-4">
-    <a href="#about" class="hover:text-blue-700 dark:hover:text-white">About</a>
-  <a href="#college" class="hover:text-blue-700 dark:hover:text-white">College</a>
-  <a href="#gallery" class="hover:text-blue-700 dark:hover:text-white">Gallery</a>
-  <a href="#faq" class="hover:text-blue-700 dark:hover:text-white">FAQ</a>
-  <a href="#contact" class="hover:text-blue-700 dark:hover:text-white">Contact</a>
-</nav>
-    <button id="theme-toggle" class="toggle-switch text-white px-4 py-2 rounded transition-transform transform hover:scale-105">Toggle</button>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="#about" class="hover:text-blue-700 dark:hover:text-white" aria-label="About section">About</a>
+      <a href="#college" class="hover:text-blue-700 dark:hover:text-white" aria-label="College events section">College</a>
+      <a href="#gallery" class="hover:text-blue-700 dark:hover:text-white" aria-label="Photo gallery section">Gallery</a>
+      <a href="#faq" class="hover:text-blue-700 dark:hover:text-white" aria-label="Frequently asked questions section">FAQ</a>
+      <a href="#contact" class="hover:text-blue-700 dark:hover:text-white" aria-label="Contact information section">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="toggle-switch text-white px-4 py-2 rounded transition-transform transform hover:scale-105" aria-label="Toggle dark/light theme">Toggle Theme</button>
   </div>
 </header>
 
-<section class="pt-24 relative bg-white dark:bg-gray-900 w-full min-h-[60vh]">
+<main id="main" role="main">
+<section class="pt-24 relative bg-white dark:bg-gray-900 w-full min-h-[60vh]" aria-label="Hero section">
   <div class="relative w-full">
     <img src="https://i.imgur.com/zepyQvg.jpeg" alt="Child jumping into pool background" class="w-full max-w-none h-auto" />
     <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-black/40 to-black/60">
@@ -129,12 +137,12 @@
 
 <section id="gallery" class="max-w-6xl mx-auto px-4 py-24 text-center scroll-mt-24">
   <div class="mb-12">
-    <img src="https://i.imgur.com/EmMhcTo.jpeg" alt="Girl on splash slide" class="rounded-xl shadow-xl w-full h-auto fade-in" />
+    <img src="https://i.imgur.com/EmMhcTo.jpeg" alt="Young girl enjoying the water slide with a big smile" class="rounded-xl shadow-xl w-full h-auto fade-in" loading="lazy" />
   </div>
   <h2 class="text-4xl font-bold mb-12">The Ultimate Backyard Experience</h2>
   <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 items-center">
     <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition fade-in">
-      <img src="https://i.imgur.com/wynfB3d.jpeg" class="rounded-xl shadow-xl w-full h-[300px] object-cover fade-in" />
+      <img src="https://i.imgur.com/wynfB3d.jpeg" alt="HeroKiddo 16-foot Purple Tropical water slide in backyard setting" class="rounded-xl shadow-xl w-full h-[300px] object-cover fade-in" loading="lazy" />
     </div>
     <div class="text-left fade-in">
       <h3 class="text-3xl font-bold mb-4">HeroKiddo 16' Purple Tropical</h3>
@@ -211,14 +219,14 @@
 
 <section id="contact" class="text-center py-32 px-4 scroll-mt-24">
   <h2 class="text-4xl font-bold mb-8">Ready to Reserve Your Date?</h2>
-  <p class="text-2xl mb-10">Call or text <strong>(206) 954-7491</strong> or email <span class="underline">westchesterwaterrentals@gmail.com</span></p>
+  <p class="text-2xl mb-10">Call or text <strong>(206) 954-7491</strong> or email <span class="underline">info@westchesterwaterrentals.com</span></p>
   <a href="mailto:info@westchesterwaterrentals.com" class="btn-primary px-12 py-5 rounded hover:scale-105 transform transition duration-300 ease-in-out">Get a Free Quote</a>
 </section>
 
 <section class="bg-white dark:bg-gray-900 py-24 px-4" id="college">
   <div class="max-w-6xl mx-auto mb-12 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-    <img src="https://i.imgur.com/7WKuqAw.jpeg" alt="College party crowd" class="rounded-xl shadow-xl w-full h-[300px] object-cover fade-in" />
-    <img src="https://i.imgur.com/Gld3zJB.jpeg" alt="College party crowd 2" class="rounded-xl shadow-xl w-full h-auto fade-in" />
+    <img src="https://i.imgur.com/7WKuqAw.jpeg" alt="Energetic college students enjoying water slide party" class="rounded-xl shadow-xl w-full h-[300px] object-cover fade-in" loading="lazy" />
+    <img src="https://i.imgur.com/Gld3zJB.jpeg" alt="Large group of college students having fun at outdoor water slide event" class="rounded-xl shadow-xl w-full h-auto fade-in" loading="lazy" />
   </div>
   <div class="max-w-6xl mx-auto text-center">
     <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-4">Frat Favorite</span>
@@ -251,15 +259,20 @@
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-4xl font-bold mb-6">Leave a Review</h2>
     <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">We’d love to hear your experience! Submit a quick review below:</p>
-    <form action="https://formspree.io/f/xqalaagl" method="POST" class="bg-white dark:bg-gray-900 shadow-md rounded-lg p-6 space-y-4">
-      <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded border dark:border-gray-700 dark:bg-gray-800" required />
-      <textarea name="review" rows="4" placeholder="Write your review here..." class="w-full p-3 rounded border dark:border-gray-700 dark:bg-gray-800" required></textarea>
-      <button type="submit" class="btn-primary px-6 py-3 rounded">Submit Review</button>
+    <form action="https://formspree.io/f/xqalaagl" method="POST" class="bg-white dark:bg-gray-900 shadow-md rounded-lg p-6 space-y-4" novalidate>
+      <label for="reviewer-name" class="sr-only">Your Name</label>
+      <input type="text" id="reviewer-name" name="name" placeholder="Your Name" class="w-full p-3 rounded border dark:border-gray-700 dark:bg-gray-800" required aria-describedby="name-help" />
+      <label for="review-text" class="sr-only">Your Review</label>
+      <textarea id="review-text" name="review" rows="4" placeholder="Write your review here..." class="w-full p-3 rounded border dark:border-gray-700 dark:bg-gray-800" required aria-describedby="review-help"></textarea>
+      <button type="submit" class="btn-primary px-6 py-3 rounded" aria-label="Submit your review">Submit Review</button>
     </form>
   </div>
 </section>
 
-<footer class="border-t border-gray-200 dark:border-gray-700 text-center py-8 text-gray-500 dark:text-gray-400">
+</section>
+</main>
+
+<footer class="border-t border-gray-200 dark:border-gray-700 text-center py-8 text-gray-500 dark:text-gray-400" role="contentinfo">
   &copy; 2025 Westchester Water Rentals. All rights reserved.
 </footer>
 
@@ -300,7 +313,7 @@
 </script>
 
 <!-- Sticky Book Now Button for Mobile -->
-<a href="#contact" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 md:hidden btn-primary px-6 py-3 rounded shadow-lg z-50">
+<a href="#contact" class="fixed bottom-20 left-1/2 transform -translate-x-1/2 md:hidden btn-primary px-6 py-3 rounded shadow-lg z-50" aria-label="Book water slide rental now">
   Book Now
 </a>
 
@@ -308,7 +321,8 @@
   // Scroll-to-top button for mobile
   const scrollBtn = document.createElement('button');
   scrollBtn.innerText = '↑';
-  scrollBtn.className = 'fixed bottom-20 right-6 z-40 p-3 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 md:hidden';
+  scrollBtn.className = 'fixed bottom-6 right-6 z-40 p-3 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 md:hidden';
+  scrollBtn.setAttribute('aria-label', 'Scroll to top');
   scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   document.body.appendChild(scrollBtn);
 
