@@ -75,7 +75,6 @@
   "name": "Westchester Water Rentals",
   "url": "https://www.westchesterwaterrentals.com",
   "logo": "https://i.imgur.com/ieansQD.jpeg",
-  "sameAs": [],
   "telephone": "+1-206-954-7491",
   "address": {
     "@type": "PostalAddress",
@@ -105,14 +104,14 @@
       <p class="text-lg text-gray-700 dark:text-gray-300">Splash into unforgettable memories</p>
     </div>
   </div>
-  <div class="flex items-center space-x-4">
-    <a href="#about" class="hover:text-blue-700 dark:hover:text-white">About</a>
+ <nav aria-label="Main navigation" class="flex items-center space-x-4">
+  <a href="#about" class="hover:text-blue-700 dark:hover:text-white">About</a>
   <a href="#college" class="hover:text-blue-700 dark:hover:text-white">College</a>
   <a href="#gallery" class="hover:text-blue-700 dark:hover:text-white">Gallery</a>
   <a href="#faq" class="hover:text-blue-700 dark:hover:text-white">FAQ</a>
   <a href="#contact" class="hover:text-blue-700 dark:hover:text-white">Contact</a>
 </nav>
-    <button id="theme-toggle" class="toggle-switch text-white px-4 py-2 rounded transition-transform transform hover:scale-105">Toggle</button>
+<button id="theme-toggle" class="toggle-switch text-white px-4 py-2 rounded transition-transform transform hover:scale-105" aria-label="Toggle dark mode">Toggle</button>
   </div>
 </header>
 
@@ -311,12 +310,6 @@
   scrollBtn.className = 'fixed bottom-20 right-6 z-40 p-3 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 md:hidden';
   scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   document.body.appendChild(scrollBtn);
-
-  // Add lazy loading and decoding to all images
-  document.querySelectorAll('img').forEach(img => {
-    img.setAttribute('loading', 'lazy');
-    img.setAttribute('decoding', 'async');
-  });
 
   // Improve nav accessibility
   document.querySelectorAll('nav a[href]').forEach(link => {
