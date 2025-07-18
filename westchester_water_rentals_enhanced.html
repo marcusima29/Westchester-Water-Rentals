@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <!-- Resource hints for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://i.imgur.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://formspree.io">
+  
+  <!-- Critical meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium water slide rentals in Westchester, CA. Professional setup, delivery, and sanitization. $350/day. Book your unforgettable event today!">
+  <meta name="keywords" content="water slide rental, Westchester CA, party rentals, bounce house, event planning">
+  <title>Westchester Water Rentals - Premium Water Slide Rentals</title>
+  
+  <!-- Optimized font loading with modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tesla/Apple-inspired CSS with Enhanced Functionality -->
+  <style>
+    /* CSS Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #1d1d1f;
+      background: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+
+    .hero-title {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #6e6e73;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section {
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    .section-large {
+      padding: 8rem 0;
+    }
+
+    /* Header with Mobile Navigation */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1d1d1f;
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: #1d1d1f;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: #007aff;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #007aff;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .theme-toggle {
+      background: #f5f5f7;
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: #e8e8ed;
+    }
+
+    /* Mobile Navigation */
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+    }
+
+    .mobile-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #1d1d1f;
+      margin: 2px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+
+    .mobile-toggle.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .mobile-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-toggle.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    @media (max-width: 768px) {
+      .mobile-toggle {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        transition: left 0.3s ease;
+        padding: 2rem;
+        justify-content: flex-start;
+        gap: 1rem;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .nav-link {
+        font-size: 1.2rem;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      padding: 12rem 0 8rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://i.imgur.com/zepyQvg.jpeg') center/cover;
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Cards & Grid */
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #007aff;
+      color: white;
+      border-color: #007aff;
+    }
+
+    .btn-primary:hover {
+      background: #0056cc;
+      border-color: #0056cc;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #007aff;
+      border-color: #007aff;
+    }
+
+    .btn-secondary:hover {
+      background: #007aff;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Forms with Enhanced UX */
+    .form {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: 2px solid #e8e8ed;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: #fafafa;
+      font-family: inherit;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #007aff;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+    }
+
+    .form-input:valid {
+      border-color: #28a745;
+    }
+
+    .form-input:invalid:not(:placeholder-shown) {
+      border-color: #dc3545;
+    }
+
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-error {
+      color: #dc3545;
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    .form-success {
+      background: #d4edda;
+      color: #155724;
+      padding: 1rem;
+      border-radius: 12px;
+      border: 1px solid #c3e6cb;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: #f5f5f7;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-icon {
+      font-size: 1.5rem;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* FAQ */
+    .faq-item {
+      margin-bottom: 1rem;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-question {
+      padding: 1.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.1rem;
+      background: #fafafa;
+      border: none;
+      transition: all 0.3s ease;
+      list-style: none;
+      position: relative;
+    }
+
+    .faq-question:hover {
+      background: #f0f0f0;
+    }
+
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    details[open] .faq-question::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 1.5rem 1.5rem;
+      color: #6e6e73;
+      line-height: 1.6;
+    }
+
+    /* Testimonials */
+    .testimonial {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .testimonial-text {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #1d1d1f;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: #007aff;
+    }
+
+    /* Footer */
+    .footer {
+      background: #1d1d1f;
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .footer-text {
+      color: #a1a1a6;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile CTA */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      right: 2rem;
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-cta {
+        display: block;
+      }
+
+      .section {
+        padding: 4rem 0;
+      }
+
+      .container {
+        padding: 0 1rem;
+      }
+    }
+
+    /* Utility Classes */
+    .text-center { text-align: center; }
+    .mb-4 { margin-bottom: 2rem; }
+    .mt-4 { margin-top: 2rem; }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Dark Mode Support */
+    .dark {
+      color-scheme: dark;
+    }
+
+    .dark body {
+      background: #000000;
+      color: #f5f5f7;
+    }
+
+    .dark .header {
+      background: rgba(0, 0, 0, 0.8);
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .dark .logo,
+    .dark .nav-link {
+      color: #f5f5f7;
+    }
+
+    .dark .theme-toggle {
+      background: #1d1d1f;
+      color: #f5f5f7;
+    }
+
+    .dark .card,
+    .dark .form,
+    .dark .testimonial,
+    .dark .faq-item {
+      background: #1d1d1f;
+      border-color: rgba(255, 255, 255, 0.1);
+      color: #f5f5f7;
+    }
+
+    .dark .form-input {
+      background: #2d2d2d;
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #f5f5f7;
+    }
+
+    .dark .contact-item {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Loading States */
+    .loading {
+      position: relative;
+      pointer-events: none;
+    }
+
+    .loading::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      margin: -10px 0 0 -10px;
+      border: 2px solid transparent;
+      border-top: 2px solid #007aff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Price Badge */
+    .price-badge {
+      background: linear-gradient(135deg, #007aff, #00d4ff);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: inline-block;
+      margin: 1rem 0;
+      box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+    }
+
+    /* Gallery hover effects */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(0, 122, 255, 0.8), rgba(102, 126, 234, 0.8));
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    /* Notification */
+    .notification {
+      position: fixed;
+      top: 100px;
+      right: 2rem;
+      background: #28a745;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transform: translateX(400px);
+      transition: transform 0.3s ease;
+      z-index: 1001;
+    }
+
+    .notification.show {
+      transform: translateX(0);
+    }
+
+    .notification.error {
+      background: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Mobile Navigation -->
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="logo">Westchester Water Rentals</a>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><button class="theme-toggle" id="theme-toggle">🌙 Dark</button></li>
+      </ul>
+
+      <button class="mobile-toggle" id="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1 class="hero-title">Premium Water Slides</h1>
+        <p class="subtitle">Transform your event into an unforgettable water adventure with our professional-grade slide rentals in Westchester, CA</p>
+        <div class="price-badge">$350 per day</div>
+        <div style="margin-top: 2rem;">
+          <a href="#contact" class="btn btn-primary" style="margin-right: 1rem;">Book Now</a>
+          <a href="#gallery" class="btn btn-secondary">View Gallery</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">Gallery</h2>
+        <p class="subtitle">See our premium water slides in action</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="gallery-item fade-in">
+          <img src="https://i.imgur.com/EmMhcTo.jpeg" alt="Girl enjoying the splash slide" class="card-image">
+          <div class="gallery-overlay">
+            <span>Hero Splash Slide</span>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in">
+          <img src="https://i.imgur.com/wynfB3d.jpeg" alt="Purple Tropical water slide setup" class="card-image">
+          <div class="gallery-overlay">
+            <span>HeroKiddo Special</span>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in">
+          <img src="https://i.imgur.com/7WKuqAw.jpeg" alt="College students having fun" class="card-image">
+          <div class="gallery-overlay">
+            <span>College Events</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features" style="background: #fafafa;">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">What's Included</h2>
+        <p class="subtitle">Everything you need for the perfect water slide experience</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card fade-in">
+          <div class="contact-icon" style="margin-bottom: 1rem;">🚚</div>
+          <h3 style="margin-bottom: 1rem; color: #1d1d1f;">Professional Delivery</h3>
+          <p style="color: #6e6e73;">Complete setup and breakdown service with professional installation team</p>
+        </div>
+        
+        <div class="card fade-in">
+          <div class="contact-icon" style="margin-bottom: 1rem;">🧽</div>
+          <h3 style="margin-bottom: 1rem; color: #1d1d1f;">Sanitized Equipment</h3>
+          <p style="color: #6e6e73;">Every unit thoroughly cleaned and sanitized before and after each rental</p>
+        </div>
+        
+        <div class="card fade-in">
+          <div class="contact-icon" style="margin-bottom: 1rem;">⏰</div>
+          <h3 style="margin-bottom: 1rem; color: #1d1d1f;">8-Hour Rental</h3>
+          <p style="color: #6e6e73;">Full day of fun with flexible timing to fit your event schedule</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About HeroKiddo Section -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center;">
+        <div class="fade-in">
+          <img src="https://i.imgur.com/wynfB3d.jpeg" alt="Purple Tropical water slide" style="width: 100%; border-radius: 20px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);">
+        </div>
+        <div class="fade-in">
+          <h2 class="section-title">HeroKiddo Special</h2>
+          <p style="font-size: 1.1rem; color: #6e6e73; margin-bottom: 2rem; line-height: 1.7;">
+            Our signature Purple Tropical slide brings the ultimate water adventure to your backyard. 
+            Perfect for birthday parties, family gatherings, and special events. Professional setup 
+            included with every rental.
+          </p>
+          <a href="#contact" class="btn btn-primary">Reserve This Slide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- College Section -->
+  <section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title" style="color: white;">College Events</h2>
+        <div style="background: #ff6b35; color: white; padding: 0.5rem 1.5rem; border-radius: 25px; display: inline-block; font-weight: 700; margin-bottom: 2rem;">
+          🏆 Frat Favorite
+        </div>
+        <p class="subtitle" style="color: rgba(255, 255, 255, 0.9);">The ultimate party centerpiece for college events and celebrations</p>
+      </div>
+      
+      <div class="grid grid-2">
+        <div class="fade-in">
+          <img src="https://i.imgur.com/7WKuqAw.jpeg" alt="College party with water slide" style="width: 100%; border-radius: 16px; margin-bottom: 1rem;">
+        </div>
+        <div class="fade-in">
+          <img src="https://i.imgur.com/Gld3zJB.jpeg" alt="Students enjoying water slide" style="width: 100%; border-radius: 16px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section" id="testimonials" style="background: #fafafa;">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="subtitle">Real experiences from satisfied customers</p>
+      </div>
+      
+      <div class="grid grid-2">
+        <div class="testimonial fade-in">
+          <p class="testimonial-text">"Amazing service! The slide was delivered on time, set up perfectly, and the kids had an absolute blast. Will definitely book again!"</p>
+          <div class="testimonial-author">— Sophia M.</div>
+        </div>
+        
+        <div class="testimonial fade-in">
+          <p class="testimonial-text">"Outstanding experience. Marcus and Will were incredibly professional and the slide was exactly as advertised. Highly recommend!"</p>
+          <div class="testimonial-author">— Jason R.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="subtitle">Everything you need to know about our service</p>
+      </div>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="faq-item fade-in">
+          <details>
+            <summary class="faq-question">What's included in the rental?</summary>
+            <div class="faq-answer">Complete service including water slide, blower, professional delivery, setup, 8-hour rental period, and full breakdown. Every unit is sanitized before and after use.</div>
+          </details>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <details>
+            <summary class="faq-question">How do I make a reservation?</summary>
+            <div class="faq-answer">Simply contact us with your preferred date and location. We'll handle all the details and confirm your booking within hours.</div>
+          </details>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <details>
+            <summary class="faq-question">What if weather doesn't cooperate?</summary>
+            <div class="faq-answer">We offer free rescheduling or full refunds for weather-related cancellations. Safety and customer satisfaction are our top priorities.</div>
+          </details>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <details>
+            <summary class="faq-question">Do you carry insurance?</summary>
+            <div class="faq-answer">Yes, we maintain comprehensive liability insurance for complete peace of mind. All equipment is regularly inspected and safety-certified.</div>
+          </details>
+        </div>
+        
+        <div class="faq-item fade-in">
+          <details>
+            <summary class="faq-question">What are your service areas?</summary>
+            <div class="faq-answer">We primarily serve Westchester, CA and surrounding areas. Contact us to confirm service availability for your location.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section-large" id="contact" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title" style="color: white;">Ready to Book?</h2>
+        <p class="subtitle" style="color: rgba(255, 255, 255, 0.9);">Get in touch and let's make your event unforgettable</p>
+      </div>
+      
+      <div class="grid grid-2" style="max-width: 1000px; margin: 0 auto;">
+        <div class="fade-in">
+          <h3 style="font-size: 1.5rem; margin-bottom: 2rem; color: white;">Contact Information</h3>
+          <div class="contact-info">
+            <div class="contact-item" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div style="font-weight: 600; color: white;">Phone</div>
+                <a href="tel:+12069547491" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">(206) 954-7491</a>
+              </div>
+            </div>
+            
+            <div class="contact-item" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <div style="font-weight: 600; color: white;">Email</div>
+                <a href="mailto:westchesterwaterrentals@gmail.com" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">westchesterwaterrentals@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-item" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div style="font-weight: 600; color: white;">Service Area</div>
+                <div style="color: rgba(255, 255, 255, 0.9);">Westchester, CA & surrounding areas</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-4">
+            <a href="tel:+12069547491" class="btn btn-secondary" style="border-color: white; color: white; width: 100%; text-align: center;">Call Now</a>
+          </div>
+        </div>
+        
+        <div class="form fade-in">
+          <h3 style="margin-bottom: 1.5rem; color: #1d1d1f;">Send us a message</h3>
+          <div class="form-success" id="form-success">
+            Thank you for your message! We'll get back to you within 24 hours.
+          </div>
+          <form id="contact-form" action="https://formspree.io/f/xqalaagl" method="POST">
+            <input type="hidden" name="_subject" value="Water Slide Rental Inquiry">
+            <input type="hidden" name="_next" value="#contact">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+              <div class="form-error">Please enter your name</div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email Address" class="form-input" required>
+              <div class="form-error">Please enter a valid email address</div>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Phone Number" class="form-input">
+              <div class="form-error">Please enter a valid phone number</div>
+            </div>
+            <div class="form-group">
+              <input type="date" name="event-date" placeholder="Event Date" class="form-input">
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Tell us about your event (date, location, number of guests, special requests)..." class="form-input form-textarea" required></textarea>
+              <div class="form-error">Please tell us about your event</div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;" id="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spanish Section -->
+  <section class="section">
+    <div class="container text-center">
+      <h2 class="section-title">¿Listo para reservar?</h2>
+      <p style="font-size: 1.25rem; color: #6e6e73; margin-bottom: 1rem;">
+        Alquila nuestro tobogán de agua por <strong style="color: #007aff;">$350 por día</strong>
+      </p>
+      <p style="color: #6e6e73; margin-bottom: 2rem;">
+        Incluye entrega, instalación y limpieza profesional
+      </p>
+      <a href="mailto:westchesterwaterrentals@gmail.com" class="btn btn-primary">Reserva Ahora</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div style="margin-bottom: 1.5rem;">
+        <div class="logo" style="color: white; font-size: 1.25rem;">Westchester Water Rentals</div>
+        <p style="color: #a1a1a6; margin-top: 0.5rem;">Making memories, one splash at a time</p>
+      </div>
+      <div class="footer-text">
+        © 2025 Westchester Water Rentals. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile CTA -->
+  <div class="mobile-cta">
+    <a href="#contact" class="btn btn-primary">Book Now</a>
+  </div>
+
+  <!-- Notification -->
+  <div class="notification" id="notification">
+    <span id="notification-text"></span>
+  </div>
+
+  <!-- Enhanced JavaScript with Full Functionality -->
+  <script>
+    // Mobile Navigation
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    mobileToggle.addEventListener('click', () => {
+      mobileToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav') && navMenu.classList.contains('active')) {
+        mobileToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    // Theme toggle with enhanced functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    // Check for saved theme or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.classList.add(savedTheme);
+    
+    function updateTheme() {
+      const isDark = html.classList.contains('dark');
+      themeToggle.textContent = isDark ? '☀️ Light' : '🌙 Dark';
+    }
+    
+    updateTheme();
+    
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      updateTheme();
+    });
+
+    // Enhanced form handling with validation and UX
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formSuccess = document.getElementById('form-success');
+    const notification = document.getElementById('notification');
+    const notificationText = document.getElementById('notification-text');
+
+    function showNotification(message, isError = false) {
+      notificationText.textContent = message;
+      notification.className = `notification show ${isError ? 'error' : ''}`;
+      setTimeout(() => {
+        notification.classList.remove('show');
+      }, 5000);
+    }
+
+    function validateForm() {
+      const inputs = contactForm.querySelectorAll('.form-input[required]');
+      let isValid = true;
+
+      inputs.forEach(input => {
+        const formGroup = input.closest('.form-group');
+        const errorElement = formGroup.querySelector('.form-error');
+        
+        if (!input.value.trim()) {
+          errorElement.style.display = 'block';
+          input.style.borderColor = '#dc3545';
+          isValid = false;
+        } else if (input.type === 'email' && !isValidEmail(input.value)) {
+          errorElement.style.display = 'block';
+          errorElement.textContent = 'Please enter a valid email address';
+          input.style.borderColor = '#dc3545';
+          isValid = false;
+        } else {
+          errorElement.style.display = 'none';
+          input.style.borderColor = '#28a745';
+        }
+      });
+
+      return isValid;
+    }
+
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Real-time form validation
+    contactForm.querySelectorAll('.form-input').forEach(input => {
+      input.addEventListener('blur', () => {
+        const formGroup = input.closest('.form-group');
+        const errorElement = formGroup.querySelector('.form-error');
+        
+        if (input.hasAttribute('required') && !input.value.trim()) {
+          errorElement.style.display = 'block';
+          input.style.borderColor = '#dc3545';
+        } else if (input.type === 'email' && input.value && !isValidEmail(input.value)) {
+          errorElement.style.display = 'block';
+          errorElement.textContent = 'Please enter a valid email address';
+          input.style.borderColor = '#dc3545';
+        } else if (input.value) {
+          errorElement.style.display = 'none';
+          input.style.borderColor = '#28a745';
+        } else {
+          errorElement.style.display = 'none';
+          input.style.borderColor = '#e8e8ed';
+        }
+      });
+    });
+
+    // Enhanced form submission
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (!validateForm()) {
+        showNotification('Please fix the errors in the form', true);
+        return;
+      }
+
+      // Show loading state
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const formData = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          formSuccess.style.display = 'block';
+          contactForm.reset();
+          showNotification('Message sent successfully! We\'ll get back to you within 24 hours.');
+          
+          // Scroll to success message
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        showNotification('There was an error sending your message. Please try calling us directly.', true);
+      } finally {
+        // Reset button state
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    });
+
+    // Enhanced scroll animations with Intersection Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Enhanced smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = document.querySelector('.header').offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Enhanced header scroll effect
+    let lastScrollY = window.scrollY;
+    
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      const currentScrollY = window.scrollY;
+      
+      // Change header background based on scroll
+      if (currentScrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.backdropFilter = 'blur(20px) saturate(180%)';
+      } else {
+        header.style.background = 'rgba(255, 255, 255, 0.8)';
+        header.style.backdropFilter = 'blur(20px)';
+      }
+      
+      // Hide/show header on scroll direction (optional)
+      if (currentScrollY > lastScrollY && currentScrollY > 500) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      
+      lastScrollY = currentScrollY;
+    });
+
+    // Lazy loading for images (already optimized in HTML)
+    if ('loading' in HTMLImageElement.prototype) {
+      // Browser supports native lazy loading
+      document.querySelectorAll('img').forEach(img => {
+        img.loading = 'lazy';
+      });
+    }
+
+    // Enhanced phone number formatting
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
+    phoneInputs.forEach(input => {
+      input.addEventListener('input', (e) => {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length >= 10) {
+          value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+        } else if (value.length >= 6) {
+          value = value.replace(/(\d{3})(\d{3})/, '($1) $2-');
+        } else if (value.length >= 3) {
+          value = value.replace(/(\d{3})/, '($1) ');
+        }
+        e.target.value = value;
+      });
+    });
+
+    // Gallery lightbox effect (basic)
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const lightbox = document.createElement('div');
+        lightbox.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.9);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+          cursor: pointer;
+        `;
+        
+        const lightboxImg = document.createElement('img');
+        lightboxImg.src = img.src;
+        lightboxImg.style.cssText = `
+          max-width: 90%;
+          max-height: 90%;
+          border-radius: 12px;
+          box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+        `;
+        
+        lightbox.appendChild(lightboxImg);
+        document.body.appendChild(lightbox);
+        
+        lightbox.addEventListener('click', () => {
+          document.body.removeChild(lightbox);
+        });
+      });
+    });
+
+    // FAQ accessibility improvements
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          question.closest('details').toggleAttribute('open');
+        }
+      });
+    });
+
+    // Service Worker for offline functionality (optional)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+
+    // Performance monitoring
+    window.addEventListener('load', () => {
+      if ('performance' in window) {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        console.log('Page load time:', loadTime + 'ms');
+      }
+    });
+
+    // Emergency contact quick actions
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    phoneLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Track phone call clicks for analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'phone_call', {
+            event_category: 'contact',
+            event_label: link.href
+          });
+        }
+      });
+    });
+
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Track email clicks for analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'email_click', {
+            event_category: 'contact',
+            event_label: link.href
+          });
+        }
+      });
+    });
+  </script>
+
+  <!-- Google Analytics (deferred loading) -->
+  <script>
+    window.addEventListener('load', () => {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+      document.head.appendChild(script);
+      
+      script.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+          page_title: 'Westchester Water Rentals',
+          page_location: window.location.href
+        });
+      };
+    });
+  </script>
+</body>
+</html>
