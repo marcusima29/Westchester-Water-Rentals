@@ -583,28 +583,35 @@
     .stagger-3 { transition-delay: 0.3s; }
     .stagger-4 { transition-delay: 0.4s; }
 
-    /* Scroll-triggered photo effects */
+    /* Smooth photo animations - fixed glitches */
     .photo-reveal {
       opacity: 0;
-      transform: scale(1.1) translateY(20px);
-      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      overflow: hidden;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+      will-change: opacity, transform;
     }
 
     .photo-reveal.visible {
       opacity: 1;
-      transform: scale(1) translateY(0);
+      transform: translateY(0);
     }
 
     .photo-zoom-out {
       opacity: 0;
-      transform: scale(1.2);
-      transition: all 1.2s ease-out;
+      transform: scale(1.05);
+      transition: all 0.9s ease-out;
+      will-change: opacity, transform;
     }
 
     .photo-zoom-out.visible {
       opacity: 1;
       transform: scale(1);
+    }
+
+    /* Prevent animation conflicts */
+    .photo-reveal img, .photo-zoom-out img {
+      transition: none !important;
+      transform: none !important;
     }
 
     /* Floating elements */
@@ -1090,7 +1097,7 @@
       
       <div class="grid grid-3">
         <div class="image-card photo-reveal fade-in-up stagger-1" data-lightbox>
-          <img src="https://i.imgur.com/EmMhcTo.jpeg" alt="Birthday party fun with water slide">
+          <img src="https://i.imgur.com/wynfB3d.jpeg" alt="Birthday party fun with water slide">
           <div class="image-card-content">
             <h4 style="color: #1d1d1f; margin-bottom: 0.5rem; font-weight: 600;">Birthday Parties</h4>
             <p style="color: #6e6e73; font-size: 0.95rem;">Make your child's special day unforgettable with pure splash-filled joy</p>
@@ -1463,23 +1470,29 @@
       }
     });
 
-    // Enhanced scroll animations with multiple observers
+    // Improved animation observer - prevents glitches
     const animationObserverOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.15,
+      rootMargin: '0px 0px -100px 0px'
     };
 
     const animationObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+        if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+          // Add a small delay to prevent rapid firing
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, 50);
         }
       });
     }, animationObserverOptions);
 
-    // Observe all animation elements
-    document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-up, .photo-reveal, .photo-zoom-out').forEach(el => {
-      animationObserver.observe(el);
+    // Observe all animation elements with error handling
+    const animationElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-up, .photo-reveal, .photo-zoom-out');
+    animationElements.forEach(el => {
+      if (el) {
+        animationObserver.observe(el);
+      }
     });
 
     // Scroll progress indicator
@@ -1494,16 +1507,7 @@
 
     window.addEventListener('scroll', updateScrollProgress);
 
-    // Parallax effect for background images
-    window.addEventListener('scroll', () => {
-      const parallaxElements = document.querySelectorAll('.parallax-bg');
-      const scrolled = window.pageYOffset;
-      
-      parallaxElements.forEach(element => {
-        const rate = scrolled * -0.5;
-        element.style.transform = `translateY(${rate}px)`;
-      });
-    });
+         // Simplified parallax - integrated into main scroll handler
 
     // Enhanced photo loading with lazy loading
     const photoObserver = new IntersectionObserver((entries) => {
@@ -1752,17 +1756,13 @@
            // Add scroll-based behaviors here
            const scrolled = window.pageYOffset;
            
-           // Parallax for parallax-bg elements
-           document.querySelectorAll('.parallax-bg').forEach(element => {
-             const rate = scrolled * -0.3;
-             element.style.transform = `translateY(${rate}px)`;
-           });
+                       // Smooth parallax for background elements
+            document.querySelectorAll('.parallax-bg').forEach(element => {
+              const rate = scrolled * -0.2; // Reduced rate for stability
+              element.style.transform = `translate3d(0, ${rate}px, 0)`; // Use translate3d for better performance
+            });
            
-           // Subtle photo movement on scroll
-           document.querySelectorAll('.photo-reveal.visible img').forEach((img, index) => {
-             const rate = scrolled * 0.05 * (index + 1);
-             img.style.transform = `translateY(${rate}px)`;
-           });
+                       // Removed problematic photo movement that caused glitches
            
            ticking = false;
          });
