@@ -17,9 +17,8 @@
   <meta name="robots" content="index, follow">
   <title>Westchester Water Rentals - Premium Water Slide Rentals | $350/Day</title>
   
-  <!-- Optimized font loading with preload -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+  <!-- Fixed font loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Tesla/Apple-inspired CSS with Enhanced Functionality -->
   <style>
@@ -538,8 +537,8 @@
 
     /* Advanced Animations */
     .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
+      opacity: 1;
+      transform: translateY(0);
       transition: all 0.6s ease;
     }
 
@@ -549,8 +548,8 @@
     }
 
     .fade-in-left {
-      opacity: 0;
-      transform: translateX(-50px);
+      opacity: 1;
+      transform: translateX(0);
       transition: all 0.8s ease;
     }
 
@@ -560,8 +559,8 @@
     }
 
     .fade-in-right {
-      opacity: 0;
-      transform: translateX(50px);
+      opacity: 1;
+      transform: translateX(0);
       transition: all 0.8s ease;
     }
 
@@ -571,8 +570,8 @@
     }
 
     .fade-in-up {
-      opacity: 0;
-      transform: translateY(40px) scale(0.95);
+      opacity: 1;
+      transform: translateY(0) scale(1);
       transition: all 0.7s ease;
     }
 
@@ -588,8 +587,8 @@
 
     /* Smooth photo animations - fixed glitches */
     .photo-reveal {
-      opacity: 0;
-      transform: translateY(30px);
+      opacity: 1;
+      transform: translateY(0);
       transition: all 0.8s ease-out;
       will-change: opacity, transform;
     }
@@ -600,8 +599,8 @@
     }
 
     .photo-zoom-out {
-      opacity: 0;
-      transform: scale(1.05);
+      opacity: 1;
+      transform: scale(1);
       transition: all 0.9s ease-out;
       will-change: opacity, transform;
     }
@@ -1034,7 +1033,7 @@
       <div class="grid grid-2" style="gap: 3rem; align-items: center;">
         <div class="photo-zoom-out fade-in-left">
           <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);">
-            <img src="https://i.imgur.com/EmMhcTo.jpeg" alt="Professional water slide setup" style="width: 100%; height: 400px; object-fit: cover; object-position: center bottom;" loading="lazy">
+            <img src="https://i.imgur.com/EmMhcTo.jpeg" alt="Professional water slide setup" style="width: 100%; height: 400px; object-fit: cover; object-position: center bottom;">
             <div style="position: absolute; bottom: 1.5rem; right: 1.5rem; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 0.8rem 1.2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
               <div style="font-weight: 700; color: #007aff; font-size: 0.9rem;">PREMIUM GRADE</div>
               <div style="font-size: 0.8rem; color: #6e6e73; margin-top: 0.2rem;">Professional Equipment</div>
@@ -1070,7 +1069,7 @@
       <div class="grid grid-2" style="align-items: center; gap: 4rem;">
         <div class="photo-reveal fade-in-left">
           <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);">
-            <img src="https://i.imgur.com/wynfB3d.jpeg" alt="Purple Tropical water slide setup" style="width: 100%; height: 500px; object-fit: cover; object-position: center top;" loading="lazy">
+            <img src="https://i.imgur.com/wynfB3d.jpeg" alt="Purple Tropical water slide setup" style="width: 100%; height: 500px; object-fit: cover; object-position: center top;">
             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)); padding: 2rem; color: white;">
               <h4 style="color: white; font-size: 1.2rem; margin-bottom: 0.5rem;">HeroKiddo Special</h4>
               <p style="color: rgba(255, 255, 255, 0.9); margin: 0;">Our signature Purple Tropical slide</p>
@@ -1125,7 +1124,7 @@
       
       <div class="grid grid-3">
         <div class="image-card photo-reveal fade-in-up stagger-1" data-lightbox>
-          <img src="https://i.imgur.com/Frlx7L7.jpeg" alt="Birthday party fun with water slide" loading="lazy">
+          <img src="https://i.imgur.com/Frlx7L7.jpeg" alt="Birthday party fun with water slide">
           <div class="image-card-content">
             <h4 style="color: #1d1d1f; margin-bottom: 0.5rem; font-weight: 600;">Birthday Parties</h4>
             <p style="color: #6e6e73; font-size: 0.95rem;">Make your child's special day unforgettable with pure splash-filled joy</p>
@@ -1133,7 +1132,7 @@
         </div>
         
         <div class="image-card photo-reveal fade-in-up stagger-2" data-lightbox>
-          <img src="https://i.imgur.com/Gld3zJB.jpeg" alt="College party celebration" loading="lazy">
+          <img src="https://i.imgur.com/Gld3zJB.jpeg" alt="College party celebration">
           <div class="image-card-content">
             <h4 style="color: #1d1d1f; margin-bottom: 0.5rem; font-weight: 600;">College Events</h4>
             <p style="color: #6e6e73; font-size: 0.95rem;">
