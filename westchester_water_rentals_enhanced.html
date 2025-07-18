@@ -861,6 +861,17 @@
       color: #999;
     }
 
+    /* About Us section dark mode styles */
+    .dark #about .card {
+      background: linear-gradient(145deg, #1d1d1f 0%, #2a2a2a 100%);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .dark #about .card h4,
+    .dark #about .card p {
+      color: #f5f5f7;
+    }
+
     /* Loading States */
     .loading {
       position: relative;
@@ -1054,7 +1065,8 @@
       
              <ul class="nav-menu" id="nav-menu">
         <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#story" class="nav-link">About</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#story" class="nav-link">Our Story</a></li>
         <li><a href="#features" class="nav-link">Features</a></li>
         <li><a href="#testimonials" class="nav-link">Reviews</a></li>
         <li><a href="#faq" class="nav-link">FAQ</a></li>
@@ -1113,6 +1125,79 @@
             <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #007aff, #00d4ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.5rem;">📞</div>
             <h4 style="color: #1d1d1f; margin-bottom: 1rem; font-weight: 600;">24/7 Support</h4>
             <p style="color: #6e6e73; line-height: 1.6;">Quick response customer service for any questions or issues during your event</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title fade-in-up">About Westchester Water Rentals</h2>
+        <p class="subtitle fade-in-up stagger-1">Student-Founded. Community-Focused. Fun-Driven.</p>
+      </div>
+      
+      <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+        <div class="fade-in-left">
+          <div style="background: linear-gradient(145deg, #ffffff 0%, #fafbff 100%); border-radius: 24px; padding: 3rem; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08); border: 1px solid rgba(0, 122, 255, 0.1);">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+              <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #007aff 0%, #0056cc 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🎓</div>
+              <div>
+                <h3 style="color: #1d1d1f; margin: 0; font-size: 1.3rem;">LMU Student-Founded</h3>
+                <p style="color: #6e6e73; margin: 0; font-size: 0.9rem;">Loyola Marymount University</p>
+              </div>
+            </div>
+            
+            <p style="font-size: 1.1rem; color: #1d1d1f; line-height: 1.7; margin-bottom: 2rem;">
+              Westchester Water Rentals was founded by two Loyola Marymount University students—<strong>Marcus</strong>, a junior, and <strong>Will</strong>, a senior—who wanted to bring safe, high-quality fun to their local community.
+            </p>
+            
+            <p style="font-size: 1.1rem; color: #1d1d1f; line-height: 1.7; margin-bottom: 2rem;">
+              What started as an idea between friends quickly turned into a student-run business focused on delivering unforgettable water slide experiences across Westchester and the greater Los Angeles area.
+            </p>
+            
+            <div style="background: #f8f9ff; border-radius: 16px; padding: 1.5rem; border-left: 4px solid #007aff;">
+              <p style="color: #007aff; font-weight: 600; margin: 0; font-size: 1rem;">💙 Thanks for supporting a student-run business!</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="fade-in-right">
+          <div style="display: grid; gap: 1.5rem;">
+            <div class="card fade-in stagger-1" style="text-align: center; padding: 2rem;">
+              <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #34d399 0%, #10b981 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem;">🏠</div>
+              <h4 style="color: #1d1d1f; margin-bottom: 1rem; font-size: 1.2rem;">Local Community Focus</h4>
+              <p style="color: #6e6e73; margin: 0; line-height: 1.6;">As locals and LMU students, we understand what makes an event special in our community.</p>
+            </div>
+            
+            <div class="card fade-in stagger-2" style="text-align: center; padding: 2rem;">
+              <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem;">🛠️</div>
+              <h4 style="color: #1d1d1f; margin-bottom: 1rem; font-size: 1.2rem;">Full-Service Experience</h4>
+              <p style="color: #6e6e73; margin: 0; line-height: 1.6;">We handle everything—from setup to takedown—so you can focus on the fun.</p>
+            </div>
+            
+            <div class="card fade-in stagger-3" style="text-align: center; padding: 2rem;">
+              <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem;">⚡</div>
+              <h4 style="color: #1d1d1f; margin-bottom: 1rem; font-size: 1.2rem;">Fast & Simple</h4>
+              <p style="color: #6e6e73; margin: 0; line-height: 1.6;">Simple booking process, fast local service, and premium inflatable slides.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 4rem; text-center;">
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 24px; padding: 3rem; color: white; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"grain\" width=\"100\" height=\"100\" patternUnits=\"userSpaceOnUse\"><circle cx=\"25\" cy=\"25\" r=\"1\" fill=\"%23ffffff\" opacity=\"0.1\"/><circle cx=\"75\" cy=\"75\" r=\"1\" fill=\"%23ffffff\" opacity=\"0.1\"/><circle cx=\"25\" cy=\"75\" r=\"1\" fill=\"%23ffffff\" opacity=\"0.05\"/><circle cx=\"75\" cy=\"25\" r=\"1\" fill=\"%23ffffff\" opacity=\"0.05\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23grain)\"/></svg>'); opacity: 0.3;"></div>
+          <div style="position: relative; z-index: 1;">
+            <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem; font-weight: 600;">Our Mission</h3>
+            <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+              Whether it's a family birthday party, a neighborhood block celebration, or a student gathering, we provide top-tier water slides that are clean, safe, and ready to make a splash.
+            </p>
+            <p style="font-size: 1.3rem; font-weight: 600; color: #fbbf24;">
+              We can't wait to help you slide into your best summer yet! 🌊
+            </p>
           </div>
         </div>
       </div>
