@@ -533,7 +533,7 @@
     .mb-4 { margin-bottom: 2rem; }
     .mt-4 { margin-top: 2rem; }
 
-    /* Animations */
+    /* Advanced Animations */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
@@ -543,6 +543,173 @@
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .fade-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+      transition: all 0.7s ease;
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+
+    /* Scroll-triggered photo effects */
+    .photo-reveal {
+      opacity: 0;
+      transform: scale(1.1) translateY(20px);
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      overflow: hidden;
+    }
+
+    .photo-reveal.visible {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    .photo-zoom-out {
+      opacity: 0;
+      transform: scale(1.2);
+      transition: all 1.2s ease-out;
+    }
+
+    .photo-zoom-out.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Floating elements */
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Typing effect */
+    .typing-effect {
+      overflow: hidden;
+      border-right: 3px solid #007aff;
+      white-space: nowrap;
+      margin: 0 auto;
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #007aff; }
+    }
+
+    /* Smooth scroll progress indicator */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, #007aff, #00d4ff);
+      z-index: 1001;
+      transition: width 0.1s ease;
+    }
+
+    /* Background image lazy loading effect */
+    .bg-lazy {
+      background-image: none !important;
+      transition: all 0.5s ease;
+    }
+
+    .bg-lazy.loaded {
+      background-image: var(--bg-image) !important;
+    }
+
+    /* Micro-interactions */
+    .interactive-element {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .interactive-element:hover {
+      transform: scale(1.02);
+    }
+
+    /* Custom cursor effects */
+    .cursor-pointer {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="10" fill="%23007aff" opacity="0.5"/><circle cx="16" cy="16" r="4" fill="%23007aff"/></svg>'), auto;
+    }
+
+    /* Enhanced button interactions */
+    .btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    /* Pulse animation for CTA elements */
+    .pulse-cta {
+      animation: pulse-glow 2s infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 20px rgba(0, 122, 255, 0);
+      }
+    }
+
+    /* Smooth transitions for all interactive elements */
+    a, button, .card, .image-card, .contact-item {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* Dark Mode Support */
@@ -749,6 +916,9 @@
   </style>
 </head>
 <body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
   <!-- Header with Mobile Navigation -->
   <header class="header">
     <nav class="nav">
@@ -772,15 +942,15 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+    <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="container">
-      <div class="hero-content fade-in">
-        <h1 class="hero-title">Premium Water Slides</h1>
-        <p class="subtitle">Transform your event into an unforgettable water adventure with our professional-grade slide rentals in Westchester, CA</p>
-        <div class="price-badge">$350 per day</div>
-                 <div style="margin-top: 2rem;">
-          <a href="#contact" class="btn btn-primary" style="margin-right: 1rem;">Book Now</a>
+      <div class="hero-content fade-in-up">
+        <h1 class="hero-title float-animation">Premium Water Slides</h1>
+        <p class="subtitle fade-in stagger-1">Transform your event into an unforgettable water adventure with our professional-grade slide rentals in Westchester, CA</p>
+        <div class="price-badge fade-in stagger-2">$350 per day</div>
+        <div style="margin-top: 2rem;" class="fade-in stagger-3">
+          <a href="#contact" class="btn btn-primary pulse-cta" style="margin-right: 1rem;">Book Now</a>
           <a href="#story" class="btn btn-secondary">Learn More</a>
         </div>
       </div>
@@ -791,7 +961,7 @@
   <section class="section" id="story">
     <div class="container">
       <div class="grid grid-2" style="align-items: center; gap: 4rem;">
-        <div class="fade-in">
+        <div class="photo-reveal fade-in-left">
           <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);">
             <img src="https://i.imgur.com/EmMhcTo.jpeg" alt="Happy child on water slide" style="width: 100%; height: 400px; object-fit: cover;">
             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)); padding: 2rem; color: white;">
@@ -800,7 +970,7 @@
             </div>
           </div>
         </div>
-        <div class="fade-in">
+        <div class="fade-in-right">
           <h2 class="section-title">Why Choose Us?</h2>
           <p style="font-size: 1.1rem; color: #6e6e73; margin-bottom: 2rem; line-height: 1.7;">
             We're not just another rental company. We're memory makers. Every smile, every laugh, 
@@ -808,15 +978,15 @@
             and absolutely unforgettable.
           </p>
           <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;" class="fade-in stagger-1">
               <div style="width: 12px; height: 12px; background: #007aff; border-radius: 50%;"></div>
               <span style="color: #1d1d1f; font-weight: 500;">Licensed & Insured Professional Service</span>
             </div>
-            <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;" class="fade-in stagger-2">
               <div style="width: 12px; height: 12px; background: #007aff; border-radius: 50%;"></div>
               <span style="color: #1d1d1f; font-weight: 500;">Sanitized Before & After Every Use</span>
             </div>
-            <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;" class="fade-in stagger-3">
               <div style="width: 12px; height: 12px; background: #007aff; border-radius: 50%;"></div>
               <span style="color: #1d1d1f; font-weight: 500;">On-Time Delivery & Setup Guarantee</span>
             </div>
@@ -857,7 +1027,7 @@
 
       <!-- Visual Showcase -->
       <div class="grid grid-2" style="gap: 3rem; align-items: center;">
-        <div class="fade-in">
+        <div class="photo-zoom-out fade-in-left">
           <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);">
             <img src="https://i.imgur.com/wynfB3d.jpeg" alt="Professional water slide setup" style="width: 100%; height: 350px; object-fit: cover;">
             <div style="position: absolute; top: 1.5rem; left: 1.5rem; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 0.8rem 1.2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
@@ -867,7 +1037,7 @@
           </div>
         </div>
         
-        <div class="fade-in">
+        <div class="fade-in-right">
           <h3 style="font-size: 2rem; color: #1d1d1f; margin-bottom: 1.5rem; font-weight: 600;">Built for Safety & Fun</h3>
           <p style="color: #6e6e73; line-height: 1.7; margin-bottom: 2rem; font-size: 1.1rem;">
             Our water slides are commercial-grade, regularly inspected, and designed with safety as the top priority. 
@@ -875,11 +1045,11 @@
           </p>
           
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-            <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);">
+            <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);" class="fade-in stagger-1">
               <div style="font-weight: 600; color: #1d1d1f; margin-bottom: 0.5rem;">Safety First</div>
               <div style="color: #6e6e73; font-size: 0.9rem;">Commercial-grade materials with safety certifications</div>
             </div>
-            <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);">
+            <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);" class="fade-in stagger-2">
               <div style="font-weight: 600; color: #1d1d1f; margin-bottom: 0.5rem;">Easy Setup</div>
               <div style="color: #6e6e73; font-size: 0.9rem;">Professional installation in under 30 minutes</div>
             </div>
@@ -919,7 +1089,7 @@
       </div>
       
       <div class="grid grid-3">
-        <div class="image-card fade-in" data-lightbox>
+        <div class="image-card photo-reveal fade-in-up stagger-1" data-lightbox>
           <img src="https://i.imgur.com/EmMhcTo.jpeg" alt="Birthday party fun with water slide">
           <div class="image-card-content">
             <h4 style="color: #1d1d1f; margin-bottom: 0.5rem; font-weight: 600;">Birthday Parties</h4>
@@ -927,7 +1097,7 @@
           </div>
         </div>
         
-        <div class="image-card fade-in" data-lightbox>
+        <div class="image-card photo-reveal fade-in-up stagger-2" data-lightbox>
           <img src="https://i.imgur.com/7WKuqAw.jpeg" alt="College party celebration">
           <div class="image-card-content">
             <h4 style="color: #1d1d1f; margin-bottom: 0.5rem; font-weight: 600;">College Events</h4>
@@ -938,7 +1108,7 @@
           </div>
         </div>
         
-        <div class="image-card fade-in" data-lightbox>
+        <div class="image-card photo-reveal fade-in-up stagger-3" data-lightbox>
           <img src="https://i.imgur.com/Gld3zJB.jpeg" alt="Group celebration with water slide">
           <div class="image-card-content">
             <h4 style="color: #1d1d1f; margin-bottom: 0.5rem; font-weight: 600;">Special Events</h4>
@@ -1293,22 +1463,65 @@
       }
     });
 
-    // Enhanced scroll animations with Intersection Observer
-    const observerOptions = {
+    // Enhanced scroll animations with multiple observers
+    const animationObserverOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const animationObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
-    }, observerOptions);
+    }, animationObserverOptions);
 
-    document.querySelectorAll('.fade-in').forEach(el => {
-      observer.observe(el);
+    // Observe all animation elements
+    document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-up, .photo-reveal, .photo-zoom-out').forEach(el => {
+      animationObserver.observe(el);
+    });
+
+    // Scroll progress indicator
+    const scrollProgress = document.getElementById('scroll-progress');
+    
+    function updateScrollProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    }
+
+    window.addEventListener('scroll', updateScrollProgress);
+
+    // Parallax effect for background images
+    window.addEventListener('scroll', () => {
+      const parallaxElements = document.querySelectorAll('.parallax-bg');
+      const scrolled = window.pageYOffset;
+      
+      parallaxElements.forEach(element => {
+        const rate = scrolled * -0.5;
+        element.style.transform = `translateY(${rate}px)`;
+      });
+    });
+
+    // Enhanced photo loading with lazy loading
+    const photoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            photoObserver.unobserve(img);
+          }
+        }
+      });
+    });
+
+    // Apply lazy loading to images
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      photoObserver.observe(img);
     });
 
     // Enhanced smooth scrolling for navigation links
@@ -1502,13 +1715,88 @@
       });
     }
 
-    // Performance monitoring
-    window.addEventListener('load', () => {
-      if ('performance' in window) {
-        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        console.log('Page load time:', loadTime + 'ms');
-      }
-    });
+         // Performance monitoring and optimizations
+     window.addEventListener('load', () => {
+       if ('performance' in window) {
+         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+         console.log('Page load time:', loadTime + 'ms');
+         
+         // Track performance metrics
+         if (typeof gtag !== 'undefined') {
+           gtag('event', 'page_load_time', {
+             event_category: 'performance',
+             value: Math.round(loadTime)
+           });
+         }
+       }
+       
+       // Initialize typing effect if element exists
+       const typingElement = document.querySelector('.typing-effect');
+       if (typingElement) {
+         typingElement.style.width = '0';
+         setTimeout(() => {
+           typingElement.style.animation = 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite';
+         }, 1000);
+       }
+     });
+
+     // Advanced scroll behaviors
+     let ticking = false;
+     
+     function updateOnScroll() {
+       updateScrollProgress();
+       
+       // Throttle scroll events for performance
+       if (!ticking) {
+         requestAnimationFrame(() => {
+           // Add scroll-based behaviors here
+           const scrolled = window.pageYOffset;
+           
+           // Parallax for parallax-bg elements
+           document.querySelectorAll('.parallax-bg').forEach(element => {
+             const rate = scrolled * -0.3;
+             element.style.transform = `translateY(${rate}px)`;
+           });
+           
+           // Subtle photo movement on scroll
+           document.querySelectorAll('.photo-reveal.visible img').forEach((img, index) => {
+             const rate = scrolled * 0.05 * (index + 1);
+             img.style.transform = `translateY(${rate}px)`;
+           });
+           
+           ticking = false;
+         });
+         ticking = true;
+       }
+     }
+     
+     window.addEventListener('scroll', updateOnScroll, { passive: true });
+
+     // Add entrance animations to existing elements
+     setTimeout(() => {
+       document.querySelectorAll('.price-badge').forEach(badge => {
+         badge.style.animation = 'float 6s ease-in-out infinite';
+       });
+     }, 2000);
+
+     // Smooth reveal for FAQ items
+     const faqObserver = new IntersectionObserver((entries) => {
+       entries.forEach((entry, index) => {
+         if (entry.isIntersecting) {
+           setTimeout(() => {
+             entry.target.style.opacity = '1';
+             entry.target.style.transform = 'translateY(0)';
+           }, index * 100);
+         }
+       });
+     });
+
+     document.querySelectorAll('.faq-item').forEach(item => {
+       item.style.opacity = '0';
+       item.style.transform = 'translateY(20px)';
+       item.style.transition = 'all 0.5s ease';
+       faqObserver.observe(item);
+     });
 
     // Emergency contact quick actions
     const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
