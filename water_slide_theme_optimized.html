@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <!-- Resource hints for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://i.imgur.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  
+  <!-- Critical meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Westchester Water Rentals</title>
+  
+  <!-- Optimized font loading with font-display: swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"></noscript>
+  
+  <!-- Critical CSS inlined -->
+  <style>
+    /* Critical above-the-fold styles */
+    body {
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header styles - critical for layout */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background-color: white;
+      border-bottom: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
+      color: black;
+    }
+    
+    /* Hero section critical styles */
+    .hero-section {
+      padding-top: 6rem;
+      position: relative;
+      background-color: white;
+      width: 100%;
+      min-height: 60vh;
+    }
+    
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    }
+    
+    /* Skip ahead for non-critical styles */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .toggle-switch {
+      background-color: #002147; /* LMU Blue */
+    }
+    .dark .toggle-switch {
+      background-color: #9e1b32; /* LMU Crimson */
+    }
+    .btn-primary {
+      background-color: #002147; /* LMU Blue */
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #001b3a;
+      transform: scale(1.05);
+    }
+    .dark .btn-primary {
+      background-color: #9e1b32; /* LMU Crimson */
+    }
+    .dark .btn-primary:hover {
+      background-color: #801628;
+    }
+    .bg-accent-light {
+      background-color: #f0f4fa; /* Soft LMU Blue tint */
+    }
+    .dark .bg-accent-light {
+      background-color: #1f2937; /* Dark slate */
+    }
+  </style>
+
+  <!-- Theme detection script - must run early -->
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- SEO and social meta tags -->
+  <meta name="description" content="Westchester Water Rentals offers premium water slide rentals for college events, birthdays, and backyard fun in Los Angeles. Fully insured, all-inclusive setup, and top-rated service.">
+  <meta property="og:title" content="Westchester Water Rentals" />
+  <meta property="og:description" content="Book premium water slides for parties, college events, and summer fun. Easy setup. Fully insured. Unmatched memories." />
+  <meta property="og:image" content="https://i.imgur.com/zepyQvg.jpeg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.westchesterwaterrentals.com" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Westchester Water Rentals",
+    "url": "https://www.westchesterwaterrentals.com",
+    "logo": "https://i.imgur.com/ieansQD.jpeg",
+    "telephone": "+1-206-954-7491",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Westchester",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="https://i.imgur.com/ieansQD.jpeg" type="image/jpeg">
+  <meta name="author" content="Marcus and Will">
+  <meta name="keywords" content="water slide rental, Westchester party rentals, backyard water slide, summer rentals Los Angeles, college party water slide">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Westchester Water Rentals">
+  <meta name="twitter:description" content="Book premium water slides for parties, college events, and summer fun.">
+  <meta name="twitter:image" content="https://i.imgur.com/zepyQvg.jpeg">
+</head>
+<body class="bg-white text-black dark:bg-gray-950 dark:text-white pt-24 transition-colors duration-500">
+<a href="#main" class="sr-only focus:not-sr-only bg-blue-600 text-white px-4 py-2">Skip to content</a>
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 border-b border-gray-200 shadow-md flex items-center justify-between px-8 py-6 text-black dark:text-white">
+  <div class="flex items-center space-x-6">
+    <!-- Optimized logo with proper dimensions and lazy loading -->
+    <img src="https://i.imgur.com/ieansQD.jpeg" 
+         alt="Westchester Water Rentals Logo" 
+         class="w-36 h-auto drop-shadow-xl" 
+         width="144" 
+         height="auto"
+         loading="eager"
+         decoding="async">
+    <div>
+      <h1 class="text-3xl font-bold leading-tight">Westchester Water Rentals</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300">Splash into unforgettable memories</p>
+    </div>
+  </div>
+  <nav aria-label="Main navigation" class="flex items-center space-x-4">
+    <a href="#about" class="hover:text-blue-700 dark:hover:text-white" aria-label="About Section">About</a>
+    <a href="#college" class="hover:text-blue-700 dark:hover:text-white" aria-label="College Section">College</a>
+    <a href="#gallery" class="hover:text-blue-700 dark:hover:text-white" aria-label="Gallery Section">Gallery</a>
+    <a href="#faq" class="hover:text-blue-700 dark:hover:text-white" aria-label="FAQ Section">FAQ</a>
+    <a href="#contact" class="hover:text-blue-700 dark:hover:text-white" aria-label="Contact Section">Contact</a>
+    <button id="theme-toggle" class="toggle-switch text-white px-4 py-2 rounded transition-transform transform hover:scale-105" aria-label="Toggle dark mode">Toggle</button>
+  </nav>
+</header>
+
+<!-- Hero section with optimized image -->
+<section id="main" class="hero-section" aria-label="Hero section">
+  <div class="relative w-full">
+    <!-- Hero image with optimized loading -->
+    <img src="https://i.imgur.com/zepyQvg.jpeg" 
+         alt="Child jumping into pool background" 
+         class="hero-image" 
+         width="1200" 
+         height="600"
+         loading="eager"
+         decoding="async"
+         fetchpriority="high" />
+    <div class="hero-overlay">
+      <h1 class="text-5xl sm:text-6xl font-bold text-white drop-shadow-lg mb-6">Slide into Summer</h1>
+      <p class="text-2xl text-white drop-shadow-md mb-8">Premium water slides, unmatched fun. Reserve today.</p>
+      <a href="#contact" class="btn-primary px-12 py-5 rounded shadow-lg hover:scale-105 transform transition duration-300 ease-in-out">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery section with lazy loading -->
+<section id="gallery" class="max-w-6xl mx-auto px-4 py-24 text-center scroll-mt-24">
+  <div class="mb-12">
+    <img src="https://i.imgur.com/EmMhcTo.jpeg" 
+         alt="Girl on splash slide" 
+         class="rounded-xl shadow-xl w-full h-auto fade-in" 
+         width="800" 
+         height="600"
+         loading="lazy"
+         decoding="async" />
+  </div>
+  <h2 class="text-4xl font-bold mb-12">The Ultimate Backyard Experience</h2>
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition fade-in">
+      <img src="https://i.imgur.com/wynfB3d.jpeg" 
+           alt="HeroKiddo 16' Purple Tropical water slide"
+           class="rounded-xl shadow-xl w-full h-[300px] object-cover fade-in" 
+           width="400" 
+           height="300"
+           loading="lazy"
+           decoding="async" />
+    </div>
+    <div class="text-left fade-in">
+      <h3 class="text-3xl font-bold mb-4">HeroKiddo 16' Purple Tropical</h3>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+        The HeroKiddo 16' Purple Tropical is a commercial-grade water slide designed for maximum fun and safety. With vibrant purple and green tropical colors, this unit adds a festive touch to any event. Built with durable materials and featuring non-slip steps and high side walls, it's perfect for kids of all ages. Whether it's a birthday, block party, or summer celebration — this slide guarantees smiles.
+      </p>
+      <p class="text-md text-gray-500">Dimensions: 27'L x 9'W x 16'H | Setup area must be flat and clear of sharp objects.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing section -->
+<section class="bg-gray-100 dark:bg-gray-800 py-24 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-4">Pricing</h2>
+    <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">Simple, transparent pricing for unforgettable fun</p>
+    <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-xl p-8 max-w-md mx-auto">
+      <h3 class="text-2xl font-bold mb-4">HeroKiddo 16' Purple Tropical</h3>
+      <div class="text-5xl font-bold text-blue-600 dark:text-blue-400 mb-4">$300</div>
+      <p class="text-gray-600 dark:text-gray-300 mb-6">8-hour rental</p>
+      <ul class="text-left space-y-3 mb-8">
+        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Delivery & setup included</li>
+        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Fully insured</li>
+        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Professional-grade equipment</li>
+        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 8-hour rental period</li>
+        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Pickup & breakdown</li>
+      </ul>
+      <a href="#contact" class="btn-primary w-full py-3 rounded-lg font-semibold">Reserve Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- About section -->
+<section id="about" class="max-w-6xl mx-auto px-4 py-24 scroll-mt-24">
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="fade-in">
+      <h2 class="text-4xl font-bold mb-6">About Westchester Water Rentals</h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+        We're Marcus and Will, two college students passionate about bringing epic water slide experiences to the Westchester area and beyond. What started as a fun idea has grown into a mission to create unforgettable memories for families, college events, and celebrations of all kinds.
+      </p>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">
+        Our commitment to safety, quality, and customer satisfaction sets us apart. Every rental includes professional setup, fully insured equipment, and our personal guarantee that your event will be a splash!
+      </p>
+      <div class="grid grid-cols-3 gap-4 text-center">
+        <div>
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">100%</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Insured</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Happy Events</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">5★</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Rating</div>
+        </div>
+      </div>
+    </div>
+    <div class="fade-in">
+      <img src="https://i.imgur.com/zepyQvg.jpeg" 
+           alt="About us - Water slide fun" 
+           class="rounded-xl shadow-xl w-full h-auto" 
+           width="600" 
+           height="400"
+           loading="lazy"
+           decoding="async" />
+    </div>
+  </div>
+</section>
+
+<!-- College section -->
+<section id="college" class="bg-gray-100 dark:bg-gray-800 py-24 px-4 scroll-mt-24">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl font-bold mb-4">Perfect for College Events</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300">Make your campus event the talk of the semester</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-4">Greek Life Events</h3>
+        <p class="text-gray-600 dark:text-gray-300">Perfect for rush events, mixers, and brotherhood/sisterhood activities. Create memorable experiences that bring your organization together.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-4">Residence Hall Programs</h3>
+        <p class="text-gray-600 dark:text-gray-300">Boost community engagement with exciting activities that get residents excited about campus life and build lasting friendships.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-4">End-of-Year Celebrations</h3>
+        <p class="text-gray-600 dark:text-gray-300">Celebrate academic achievements and the end of finals with an epic water slide party that everyone will remember.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ section -->
+<section id="faq" class="max-w-4xl mx-auto px-4 py-24 scroll-mt-24">
+  <div class="text-center mb-16 fade-in">
+    <h2 class="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+    <p class="text-xl text-gray-600 dark:text-gray-300">Everything you need to know about our water slide rentals</p>
+  </div>
+  <div class="space-y-8">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in">
+      <h3 class="text-xl font-bold mb-3">What's included in the rental?</h3>
+      <p class="text-gray-700 dark:text-gray-300">Every rental includes delivery, professional setup, the water slide for 8 hours, and pickup/breakdown. We also provide basic safety instructions and are fully insured.</p>
+    </div>
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in">
+      <h3 class="text-xl font-bold mb-3">How much space do I need?</h3>
+      <p class="text-gray-700 dark:text-gray-300">The HeroKiddo requires a 27'L x 9'W setup area, plus additional space for safe entry and exit. The area must be relatively flat and clear of sharp objects, trees, or overhead obstacles.</p>
+    </div>
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in">
+      <h3 class="text-xl font-bold mb-3">Do you provide water?</h3>
+      <p class="text-gray-700 dark:text-gray-300">You'll need access to a standard garden hose and water source. We bring all the necessary hoses and connections to set up the water system.</p>
+    </div>
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in">
+      <h3 class="text-xl font-bold mb-3">What if it rains?</h3>
+      <p class="text-gray-700 dark:text-gray-300">Safety first! We'll work with you to reschedule if weather conditions aren't suitable. We monitor weather forecasts and will contact you in advance if needed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact section -->
+<section id="contact" class="bg-gray-100 dark:bg-gray-800 py-24 px-4 scroll-mt-24">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="fade-in">
+      <h2 class="text-4xl font-bold mb-4">Ready to Book?</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">Get in touch and let's make your event unforgettable!</p>
+      <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+          <div class="space-y-3 text-left">
+            <div class="flex items-center">
+              <span class="font-semibold mr-2">Phone:</span>
+              <a href="tel:+12069547491" class="text-blue-600 dark:text-blue-400 hover:underline">+1-206-954-7491</a>
+            </div>
+            <div class="flex items-center">
+              <span class="font-semibold mr-2">Email:</span>
+              <a href="mailto:info@westchesterwaterrentals.com" class="text-blue-600 dark:text-blue-400 hover:underline">info@westchesterwaterrentals.com</a>
+            </div>
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">Service Area:</span>
+              <span>Westchester, CA and surrounding areas</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold mb-4">Quick Booking</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Call or text us with your event date, location, and any questions. We'll get back to you within a few hours!</p>
+          <a href="tel:+12069547491" class="btn-primary w-full py-3 rounded-lg font-semibold inline-block">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <img src="https://i.imgur.com/ieansQD.jpeg" 
+         alt="Westchester Water Rentals Logo" 
+         class="w-24 h-auto mx-auto mb-4" 
+         width="96" 
+         height="auto"
+         loading="lazy"
+         decoding="async">
+    <h3 class="text-2xl font-bold mb-2">Westchester Water Rentals</h3>
+    <p class="text-gray-400 mb-6">Making memories, one splash at a time</p>
+    <div class="flex justify-center space-x-6 text-sm text-gray-400">
+      <span>© 2024 Westchester Water Rentals</span>
+      <span>•</span>
+      <span>Marcus and Will</span>
+      <span>•</span>
+      <span>Fully Insured</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky Book Now Button for Mobile -->
+<a href="#contact" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 md:hidden btn-primary px-6 py-3 rounded shadow-lg z-50" aria-label="Book Now">
+  Book Now
+</a>
+
+<!-- Deferred JavaScript for non-critical functionality -->
+<script>
+  // Theme toggle functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    });
+
+    // Intersection Observer for fade-in animations
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, appearOptions);
+    
+    faders.forEach(fader => appearOnScroll.observe(fader));
+
+    // Scroll-to-top button for mobile
+    const scrollBtn = document.createElement('button');
+    scrollBtn.innerText = '↑';
+    scrollBtn.className = 'fixed bottom-20 right-6 z-40 p-3 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 md:hidden opacity-0 transition-opacity';
+    scrollBtn.setAttribute('aria-label', 'Scroll to top');
+    scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.appendChild(scrollBtn);
+
+    // Show/hide scroll button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.style.opacity = '1';
+      } else {
+        scrollBtn.style.opacity = '0';
+      }
+    });
+  });
+</script>
+
+<!-- Google Analytics - deferred for performance -->
+<script>
+  window.addEventListener('load', () => {
+    // Load Google Analytics after page load
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+    document.head.appendChild(script);
+    
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    };
+  });
+</script>
+</body>
+</html>
