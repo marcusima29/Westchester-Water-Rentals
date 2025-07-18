@@ -11,12 +11,15 @@
   <!-- Critical meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium water slide rentals in Westchester, CA. Professional setup, delivery, and sanitization. $350/day. Book your unforgettable event today!">
-  <meta name="keywords" content="water slide rental, Westchester CA, party rentals, bounce house, event planning">
-  <title>Westchester Water Rentals - Premium Water Slide Rentals</title>
+  <meta name="description" content="Premium water slide rentals in Westchester, CA. Professional delivery, setup & sanitization. $350/day all-inclusive. Weather guarantee. Book now!">
+  <meta name="keywords" content="water slide rental, Westchester CA, birthday party, college events, bounce house, event rental, party planning">
+  <meta name="author" content="Westchester Water Rentals">
+  <meta name="robots" content="index, follow">
+  <title>Westchester Water Rentals - Premium Water Slide Rentals | $350/Day</title>
   
-  <!-- Optimized font loading with modern typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Optimized font loading with preload -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
   
   <!-- Tesla/Apple-inspired CSS with Enhanced Functionality -->
   <style>
@@ -1031,7 +1034,7 @@
       <div class="grid grid-2" style="gap: 3rem; align-items: center;">
         <div class="photo-zoom-out fade-in-left">
           <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);">
-            <img src="https://i.imgur.com/EmMhcTo.jpeg" alt="Professional water slide setup" style="width: 100%; height: 400px; object-fit: cover; object-position: center bottom;">
+            <img src="https://i.imgur.com/EmMhcTo.jpeg" alt="Professional water slide setup" style="width: 100%; height: 400px; object-fit: cover; object-position: center bottom;" loading="lazy">
             <div style="position: absolute; bottom: 1.5rem; right: 1.5rem; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 0.8rem 1.2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
               <div style="font-weight: 700; color: #007aff; font-size: 0.9rem;">PREMIUM GRADE</div>
               <div style="font-size: 0.8rem; color: #6e6e73; margin-top: 0.2rem;">Professional Equipment</div>
@@ -1067,7 +1070,7 @@
       <div class="grid grid-2" style="align-items: center; gap: 4rem;">
         <div class="photo-reveal fade-in-left">
           <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);">
-            <img src="https://i.imgur.com/wynfB3d.jpeg" alt="Purple Tropical water slide setup" style="width: 100%; height: 450px; object-fit: cover; object-position: center;">
+            <img src="https://i.imgur.com/wynfB3d.jpeg" alt="Purple Tropical water slide setup" style="width: 100%; height: 500px; object-fit: cover; object-position: center top;" loading="lazy">
             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)); padding: 2rem; color: white;">
               <h4 style="color: white; font-size: 1.2rem; margin-bottom: 0.5rem;">HeroKiddo Special</h4>
               <p style="color: rgba(255, 255, 255, 0.9); margin: 0;">Our signature Purple Tropical slide</p>
@@ -1122,7 +1125,7 @@
       
       <div class="grid grid-3">
         <div class="image-card photo-reveal fade-in-up stagger-1" data-lightbox>
-          <img src="https://i.imgur.com/7WKuqAw.jpeg" alt="Birthday party fun with water slide">
+          <img src="https://i.imgur.com/Frlx7L7.jpeg" alt="Birthday party fun with water slide" loading="lazy">
           <div class="image-card-content">
             <h4 style="color: #1d1d1f; margin-bottom: 0.5rem; font-weight: 600;">Birthday Parties</h4>
             <p style="color: #6e6e73; font-size: 0.95rem;">Make your child's special day unforgettable with pure splash-filled joy</p>
@@ -1130,7 +1133,7 @@
         </div>
         
         <div class="image-card photo-reveal fade-in-up stagger-2" data-lightbox>
-          <img src="https://i.imgur.com/Gld3zJB.jpeg" alt="College party celebration">
+          <img src="https://i.imgur.com/Gld3zJB.jpeg" alt="College party celebration" loading="lazy">
           <div class="image-card-content">
             <h4 style="color: #1d1d1f; margin-bottom: 0.5rem; font-weight: 600;">College Events</h4>
             <p style="color: #6e6e73; font-size: 0.95rem;">
@@ -1494,29 +1497,29 @@
       }
     });
 
-    // Improved animation observer - prevents glitches
+    // Optimized animation observer with better performance
     const animationObserverOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -100px 0px'
+      threshold: [0.1, 0.25], // Multiple thresholds for better triggering
+      rootMargin: '0px 0px -50px 0px' // Reduced margin for earlier triggers
     };
 
     const animationObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
-          // Add a small delay to prevent rapid firing
-          setTimeout(() => {
+          // Use requestAnimationFrame for smoother animations
+          requestAnimationFrame(() => {
             entry.target.classList.add('visible');
-          }, 50);
+            // Unobserve after animation to save resources
+            animationObserver.unobserve(entry.target);
+          });
         }
       });
     }, animationObserverOptions);
 
-    // Observe all animation elements with error handling
-    const animationElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-up, .photo-reveal, .photo-zoom-out');
-    animationElements.forEach(el => {
-      if (el) {
-        animationObserver.observe(el);
-      }
+    // Batch observe animation elements for better performance
+    const animationSelectors = '.fade-in, .fade-in-left, .fade-in-right, .fade-in-up, .photo-reveal, .photo-zoom-out';
+    document.querySelectorAll(animationSelectors).forEach(el => {
+      animationObserver.observe(el);
     });
 
     // Scroll progress indicator
@@ -1768,32 +1771,38 @@
        }
      });
 
-     // Advanced scroll behaviors
+          // Optimized scroll behaviors with better performance
      let ticking = false;
+     let lastScrollY = 0;
      
      function updateOnScroll() {
+       const currentScrollY = window.scrollY;
+       
+       // Only update if scroll position changed significantly
+       if (Math.abs(currentScrollY - lastScrollY) < 5) return;
+       
        updateScrollProgress();
        
-       // Throttle scroll events for performance
+       // Throttle scroll events for 60fps performance
        if (!ticking) {
          requestAnimationFrame(() => {
-           // Add scroll-based behaviors here
-           const scrolled = window.pageYOffset;
+           // Optimized parallax with reduced calculations
+           const parallaxElements = document.querySelectorAll('.parallax-bg');
+           if (parallaxElements.length > 0) {
+             const rate = currentScrollY * -0.15; // Further reduced for smoothness
+             parallaxElements.forEach(element => {
+               element.style.transform = `translate3d(0, ${rate}px, 0)`;
+             });
+           }
            
-                       // Smooth parallax for background elements
-            document.querySelectorAll('.parallax-bg').forEach(element => {
-              const rate = scrolled * -0.2; // Reduced rate for stability
-              element.style.transform = `translate3d(0, ${rate}px, 0)`; // Use translate3d for better performance
-            });
-           
-                       // Removed problematic photo movement that caused glitches
-           
+           lastScrollY = currentScrollY;
            ticking = false;
          });
          ticking = true;
        }
      }
      
+     // Use passive scroll listener for better performance
      window.addEventListener('scroll', updateOnScroll, { passive: true });
 
      // Add entrance animations to existing elements
