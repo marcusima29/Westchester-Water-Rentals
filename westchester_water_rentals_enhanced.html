@@ -40,7 +40,7 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       line-height: 1.6;
       color: #1d1d1f;
-      background: #ffffff;
+      background: linear-gradient(135deg, #fafbff 0%, #f8f9fa 100%);
       overflow-x: hidden;
     }
 
@@ -55,10 +55,11 @@
       font-size: clamp(3rem, 8vw, 6rem);
       font-weight: 700;
       letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      text-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
     }
 
     .section-title {
@@ -99,10 +100,11 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
+      backdrop-filter: blur(30px) saturate(150%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       transition: all 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
     }
 
     .nav {
@@ -269,17 +271,24 @@
     .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
     .card {
-      background: white;
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      border: 1px solid rgba(0, 0, 0, 0.05);
+      background: linear-gradient(145deg, #ffffff 0%, #fafbff 100%);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 1px 0px rgba(255, 255, 255, 0.5) inset,
+        0 -1px 0px rgba(0, 0, 0, 0.05) inset;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.12),
+        0 1px 0px rgba(255, 255, 255, 0.6) inset,
+        0 -1px 0px rgba(0, 0, 0, 0.08) inset;
     }
 
     .card-image {
@@ -293,39 +302,50 @@
     /* Buttons */
     .btn {
       display: inline-block;
-      padding: 1rem 2rem;
-      border-radius: 20px;
+      padding: 1.2rem 2.5rem;
+      border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       border: 2px solid transparent;
       cursor: pointer;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.5px;
     }
 
     .btn-primary {
-      background: #007aff;
+      background: linear-gradient(135deg, #007aff 0%, #0056cc 100%);
       color: white;
-      border-color: #007aff;
+      border-color: transparent;
+      box-shadow: 
+        0 8px 24px rgba(0, 122, 255, 0.3),
+        0 1px 0px rgba(255, 255, 255, 0.2) inset;
     }
 
     .btn-primary:hover {
-      background: #0056cc;
-      border-color: #0056cc;
-      transform: translateY(-2px);
+      background: linear-gradient(135deg, #0056cc 0%, #004499 100%);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 
+        0 12px 32px rgba(0, 122, 255, 0.4),
+        0 1px 0px rgba(255, 255, 255, 0.3) inset;
     }
 
     .btn-secondary {
-      background: transparent;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
       color: #007aff;
-      border-color: #007aff;
+      border: 2px solid rgba(0, 122, 255, 0.2);
+      backdrop-filter: blur(10px);
     }
 
     .btn-secondary:hover {
-      background: #007aff;
+      background: linear-gradient(135deg, #007aff 0%, #0056cc 100%);
       color: white;
-      transform: translateY(-2px);
+      border-color: transparent;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 12px 32px rgba(0, 122, 255, 0.3);
     }
 
     /* Forms with Enhanced UX */
@@ -473,11 +493,28 @@
     /* Testimonials */
     .testimonial {
       text-align: center;
-      padding: 3rem 2rem;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 3rem 2.5rem;
+      background: linear-gradient(145deg, #ffffff 0%, #fafbff 100%);
+      border-radius: 28px;
+      box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.08),
+        0 1px 0px rgba(255, 255, 255, 0.6) inset,
+        0 -1px 0px rgba(0, 0, 0, 0.05) inset;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial::before {
+      content: '"';
+      position: absolute;
+      top: 1rem;
+      left: 2rem;
+      font-size: 4rem;
+      color: rgba(59, 130, 246, 0.1);
+      font-family: serif;
+      line-height: 1;
     }
 
     .testimonial-text {
@@ -821,17 +858,38 @@
       100% { transform: rotate(360deg); }
     }
 
-    /* Price Badge */
+    /* Premium Price Badge */
     .price-badge {
-      background: linear-gradient(135deg, #007aff, #00d4ff);
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
       color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
+      padding: 1rem 2rem;
+      border-radius: 50px;
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       display: inline-block;
-      margin: 1rem 0;
-      box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+      margin: 1.5rem 0;
+      box-shadow: 
+        0 12px 40px rgba(59, 130, 246, 0.4),
+        0 1px 0px rgba(255, 255, 255, 0.3) inset,
+        0 -1px 0px rgba(0, 0, 0, 0.1) inset;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-badge::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .price-badge:hover::before {
+      left: 100%;
     }
 
     /* Enhanced Photo Integration */
