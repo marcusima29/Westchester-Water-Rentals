@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <!-- Resource hints for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://i.imgur.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  
+  <!-- Critical meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Westchester Water Rentals - Premium Water Slide Rentals</title>
+  
+  <!-- Optimized font loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- ALL CSS INLINED AND OPTIMIZED -->
+  <style>
+    /* CSS Reset & Base Styles */
+    *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+    ::before,::after{--tw-content:''}
+    html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
+    body{margin:0;line-height:inherit}
+    hr{height:0;color:inherit;border-top-width:1px}
+    abbr:where([title]){text-decoration:underline dotted}
+    h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}
+    a{color:inherit;text-decoration:inherit}
+    b,strong{font-weight:bolder}
+    code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono",Menlo,monospace;font-size:1em}
+    small{font-size:80%}
+    sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+    sub{bottom:-.25em}
+    sup{top:-.5em}
+    table{text-indent:0;border-color:inherit;border-collapse:collapse}
+    button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}
+    button,select{text-transform:none}
+    button,[type='button'],[type='reset'],[type='submit']{-webkit-appearance:button;background-color:transparent;background-image:none}
+    :-moz-focusring{outline:auto}
+    :-moz-ui-invalid{box-shadow:none}
+    progress{vertical-align:baseline}
+    ::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}
+    [type='search']{-webkit-appearance:textfield;outline-offset:-2px}
+    ::-webkit-search-decoration{-webkit-appearance:none}
+    ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+    summary{display:list-item}
+    blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}
+    fieldset{margin:0;padding:0}
+    legend{padding:0}
+    ol,ul,menu{list-style:none;margin:0;padding:0}
+    textarea{resize:vertical}
+    input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}
+    button,[role="button"]{cursor:pointer}
+    :disabled{cursor:default}
+    img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}
+    img,video{max-width:100%;height:auto}
+    [hidden]{display:none}
+
+    /* Core Styles */
+    body {
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Utility Classes */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
+    .focus\:not-sr-only:focus{position:static;width:auto;height:auto;padding:0;margin:0;overflow:visible;clip:auto;white-space:normal}
+    .fixed{position:fixed}
+    .absolute{position:absolute}
+    .relative{position:relative}
+    .inset-0{top:0;right:0;bottom:0;left:0}
+    .bottom-6{bottom:1.5rem}
+    .bottom-20{bottom:5rem}
+    .left-1\/2{left:50%}
+    .right-6{right:1.5rem}
+    .top-0{top:0}
+    .left-0{left:0}
+    .right-0{right:0}
+    .z-40{z-index:40}
+    .z-50{z-index:50}
+    .mx-auto{margin-left:auto;margin-right:auto}
+    .mb-2{margin-bottom:.5rem}
+    .mb-4{margin-bottom:1rem}
+    .mb-6{margin-bottom:1.5rem}
+    .mb-8{margin-bottom:2rem}
+    .mb-12{margin-bottom:3rem}
+    .mb-16{margin-bottom:4rem}
+    .mr-2{margin-right:.5rem}
+    .flex{display:flex}
+    .grid{display:grid}
+    .hidden{display:none}
+    .h-auto{height:auto}
+    .h-\[300px\]{height:300px}
+    .w-full{width:100%}
+    .w-24{width:6rem}
+    .w-36{width:9rem}
+    .max-w-2xl{max-width:42rem}
+    .max-w-4xl{max-width:56rem}
+    .max-w-6xl{max-width:72rem}
+    .max-w-md{max-width:28rem}
+    .-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .cursor-pointer{cursor:pointer}
+    .grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .flex-col{flex-direction:column}
+    .items-start{align-items:flex-start}
+    .items-center{align-items:center}
+    .justify-center{justify-content:center}
+    .justify-between{justify-content:space-between}
+    .gap-4{gap:1rem}
+    .gap-8{gap:2rem}
+    .gap-12{gap:3rem}
+    .space-x-3>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.75rem*var(--tw-space-x-reverse));margin-left:calc(.75rem*calc(1-var(--tw-space-x-reverse)))}
+    .space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem*var(--tw-space-x-reverse));margin-left:calc(1rem*calc(1-var(--tw-space-x-reverse)))}
+    .space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem*var(--tw-space-x-reverse));margin-left:calc(1.5rem*calc(1-var(--tw-space-x-reverse)))}
+    .space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*calc(1-var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}
+    .space-y-8>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem*calc(1-var(--tw-space-y-reverse)));margin-bottom:calc(2rem*var(--tw-space-y-reverse))}
+    .scroll-mt-24{scroll-margin-top:6rem}
+    .rounded{border-radius:.25rem}
+    .rounded-xl{border-radius:.75rem}
+    .rounded-2xl{border-radius:1rem}
+    .rounded-lg{border-radius:.5rem}
+    .rounded-full{border-radius:9999px}
+    .border-b{border-bottom-width:1px}
+    .border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235/var(--tw-border-opacity))}
+    .bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}
+    .bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity))}
+    .bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55/var(--tw-bg-opacity))}
+    .bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39/var(--tw-bg-opacity))}
+    .bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity))}
+    .object-cover{object-fit:cover}
+    .p-3{padding:.75rem}
+    .p-6{padding:1.5rem}
+    .p-8{padding:2rem}
+    .px-4{padding-left:1rem;padding-right:1rem}
+    .px-6{padding-left:1.5rem;padding-right:1.5rem}
+    .px-8{padding-left:2rem;padding-right:2rem}
+    .px-12{padding-left:3rem;padding-right:3rem}
+    .py-2{padding-top:.5rem;padding-bottom:.5rem}
+    .py-3{padding-top:.75rem;padding-bottom:.75rem}
+    .py-5{padding-top:1.25rem;padding-bottom:1.25rem}
+    .py-6{padding-top:1.5rem;padding-bottom:1.5rem}
+    .py-12{padding-top:3rem;padding-bottom:3rem}
+    .py-24{padding-top:6rem;padding-bottom:6rem}
+    .pt-24{padding-top:6rem}
+    .text-center{text-align:center}
+    .text-left{text-left}
+    .font-semibold{font-weight:600}
+    .font-bold{font-weight:700}
+    .text-sm{font-size:.875rem;line-height:1.25rem}
+    .text-md{font-size:1rem;line-height:1.5rem}
+    .text-lg{font-size:1.125rem;line-height:1.75rem}
+    .text-xl{font-size:1.25rem;line-height:1.75rem}
+    .text-2xl{font-size:1.5rem;line-height:2rem}
+    .text-3xl{font-size:1.875rem;line-height:2.25rem}
+    .text-4xl{font-size:2.25rem;line-height:2.5rem}
+    .text-5xl{font-size:3rem;line-height:1}
+    .leading-tight{line-height:1.25}
+    .text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}
+    .text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}
+    .text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}
+    .text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}
+    .text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity))}
+    .text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity))}
+    .text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity))}
+    .text-green-500{--tw-text-opacity:1;color:rgb(34 197 94/var(--tw-text-opacity))}
+    .no-underline{text-decoration-line:none}
+    .shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0/.1),0 2px 4px -2px rgb(0 0 0/.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+    .shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0/.1),0 4px 6px -4px rgb(0 0 0/.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+    .shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0/.1),0 8px 10px -6px rgb(0 0 0/.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}
+    .drop-shadow-xl{--tw-drop-shadow:drop-shadow(0 20px 13px rgb(0 0 0/.03)) drop-shadow(0 8px 5px rgb(0 0 0/.08));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}
+    .drop-shadow-lg{--tw-drop-shadow:drop-shadow(0 10px 8px rgb(0 0 0/.04)) drop-shadow(0 4px 3px rgb(0 0 0/.1));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}
+    .drop-shadow-md{--tw-drop-shadow:drop-shadow(0 4px 3px rgb(0 0 0/.07)) drop-shadow(0 2px 2px rgb(0 0 0/.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}
+    .transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+    .transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+    .transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+    .transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+    .duration-300{transition-duration:.3s}
+    .duration-500{transition-duration:.5s}
+    .ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}
+
+    /* Dark mode styles */
+    .dark .dark\:bg-gray-950{--tw-bg-opacity:1;background-color:rgb(3 7 18/var(--tw-bg-opacity))}
+    .dark .dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39/var(--tw-bg-opacity))}
+    .dark .dark\:bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55/var(--tw-bg-opacity))}
+    .dark .dark\:bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81/var(--tw-bg-opacity))}
+    .dark .dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}
+    .dark .dark\:text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219/var(--tw-text-opacity))}
+    .dark .dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}
+    .dark .dark\:text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250/var(--tw-text-opacity))}
+
+    /* Responsive utilities */
+    @media (min-width: 640px) {
+      .sm\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
+      .sm\:text-6xl{font-size:3.75rem;line-height:1}
+    }
+    @media (min-width: 768px) {
+      .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .md\:hidden{display:none}
+    }
+
+    /* Hover effects */
+    .hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity))}
+    .hover\:underline:hover{text-decoration-line:underline}
+    .hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81/var(--tw-bg-opacity))}
+    .dark .dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}
+
+    /* Custom styles */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .btn-primary {
+      background-color: #002147;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      background-color: #001b3a;
+      transform: scale(1.05);
+    }
+    .dark .btn-primary {
+      background-color: #9e1b32;
+    }
+    .dark .btn-primary:hover {
+      background-color: #801628;
+    }
+
+    .toggle-switch {
+      background-color: #002147;
+    }
+    .dark .toggle-switch {
+      background-color: #9e1b32;
+    }
+
+    .hero-section {
+      padding-top: 6rem;
+      position: relative;
+      background-color: white;
+      width: 100%;
+      min-height: 60vh;
+    }
+    .dark .hero-section {
+      background-color: rgb(17 24 39);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    }
+
+    /* Optimized loading states */
+    img[loading="lazy"] {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    img[loading="lazy"].loaded {
+      opacity: 1;
+    }
+
+    /* Performance optimizations */
+    img {
+      content-visibility: auto;
+    }
+    
+    .scroll-smooth {
+      scroll-behavior: smooth;
+    }
+
+    /* Preload critical styles */
+    .min-h-\[60vh\] {
+      min-height: 60vh;
+    }
+  </style>
+
+  <!-- Theme detection script - must run early -->
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- SEO and social meta tags -->
+  <meta name="description" content="Westchester Water Rentals offers premium water slide rentals for college events, birthdays, and backyard fun in Los Angeles. Fully insured, all-inclusive setup, and top-rated service.">
+  <meta property="og:title" content="Westchester Water Rentals - Premium Water Slide Rentals" />
+  <meta property="og:description" content="Book premium water slides for parties, college events, and summer fun. Easy setup. Fully insured. Unmatched memories." />
+  <meta property="og:image" content="https://i.imgur.com/zepyQvg.jpeg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.westchesterwaterrentals.com" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Westchester Water Rentals",
+    "url": "https://www.westchesterwaterrentals.com",
+    "logo": "https://i.imgur.com/ieansQD.jpeg",
+    "telephone": "+1-206-954-7491",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Westchester",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="https://i.imgur.com/ieansQD.jpeg" type="image/jpeg">
+  <meta name="author" content="Marcus and Will">
+  <meta name="keywords" content="water slide rental, Westchester party rentals, backyard water slide, summer rentals Los Angeles, college party water slide">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Westchester Water Rentals - Premium Water Slide Rentals">
+  <meta name="twitter:description" content="Book premium water slides for parties, college events, and summer fun.">
+  <meta name="twitter:image" content="https://i.imgur.com/zepyQvg.jpeg">
+</head>
+<body class="bg-white text-black dark:bg-gray-950 dark:text-white pt-24 transition-colors duration-500">
+<a href="#main" class="sr-only focus:not-sr-only bg-blue-600 text-white px-4 py-2">Skip to content</a>
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 border-b border-gray-200 shadow-md flex items-center justify-between px-8 py-6 text-black dark:text-white">
+  <div class="flex items-center space-x-6">
+    <img src="https://i.imgur.com/ieansQD.jpeg" 
+         alt="Westchester Water Rentals Logo" 
+         class="w-36 h-auto drop-shadow-xl" 
+         width="144" 
+         height="auto"
+         loading="eager"
+         decoding="async">
+    <div>
+      <h1 class="text-3xl font-bold leading-tight">Westchester Water Rentals</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300">Splash into unforgettable memories</p>
+    </div>
+  </div>
+  <nav aria-label="Main navigation" class="flex items-center space-x-4">
+    <a href="#about" class="hover:text-blue-700 dark:hover:text-white" aria-label="About Section">About</a>
+    <a href="#college" class="hover:text-blue-700 dark:hover:text-white" aria-label="College Section">College</a>
+    <a href="#gallery" class="hover:text-blue-700 dark:hover:text-white" aria-label="Gallery Section">Gallery</a>
+    <a href="#faq" class="hover:text-blue-700 dark:hover:text-white" aria-label="FAQ Section">FAQ</a>
+    <a href="#contact" class="hover:text-blue-700 dark:hover:text-white" aria-label="Contact Section">Contact</a>
+    <button id="theme-toggle" class="toggle-switch text-white px-4 py-2 rounded transition-transform transform hover:scale-105" aria-label="Toggle dark mode">🌙</button>
+  </nav>
+</header>
+
+<!-- Hero section with optimized image -->
+<section id="main" class="hero-section min-h-[60vh]" aria-label="Hero section">
+  <div class="relative w-full">
+    <img src="https://i.imgur.com/zepyQvg.jpeg" 
+         alt="Child jumping into pool background" 
+         class="hero-image" 
+         width="1200" 
+         height="600"
+         loading="eager"
+         decoding="async"
+         fetchpriority="high" />
+    <div class="hero-overlay">
+      <h1 class="text-5xl sm:text-6xl font-bold text-white drop-shadow-lg mb-6">Slide into Summer</h1>
+      <p class="text-2xl text-white drop-shadow-md mb-8">Premium water slides, unmatched fun. Reserve today.</p>
+      <a href="#contact" class="btn-primary px-12 py-5 rounded shadow-lg hover:scale-105 transform transition duration-300 ease-in-out">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery section with lazy loading -->
+<section id="gallery" class="max-w-6xl mx-auto px-4 py-24 text-center scroll-mt-24">
+  <div class="mb-12">
+    <img src="https://i.imgur.com/EmMhcTo.jpeg" 
+         alt="Girl on splash slide" 
+         class="rounded-xl shadow-xl w-full h-auto fade-in" 
+         width="800" 
+         height="600"
+         loading="lazy"
+         decoding="async" />
+  </div>
+  <h2 class="text-4xl font-bold mb-12">The Ultimate Backyard Experience</h2>
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition fade-in">
+      <img src="https://i.imgur.com/wynfB3d.jpeg" 
+           alt="HeroKiddo 16' Purple Tropical water slide"
+           class="rounded-xl shadow-xl w-full h-[300px] object-cover fade-in" 
+           width="400" 
+           height="300"
+           loading="lazy"
+           decoding="async" />
+    </div>
+    <div class="text-left fade-in">
+      <h3 class="text-3xl font-bold mb-4">HeroKiddo 16' Purple Tropical</h3>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+        The HeroKiddo 16' Purple Tropical is a commercial-grade water slide designed for maximum fun and safety. With vibrant purple and green tropical colors, this unit adds a festive touch to any event. Built with durable materials and featuring non-slip steps and high side walls, it's perfect for kids of all ages. Whether it's a birthday, block party, or summer celebration — this slide guarantees smiles.
+      </p>
+      <p class="text-md text-gray-500">Dimensions: 27'L x 9'W x 16'H | Setup area must be flat and clear of sharp objects.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing section -->
+<section class="bg-gray-100 dark:bg-gray-800 py-24 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-4">Pricing</h2>
+    <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">Simple, transparent pricing for unforgettable fun</p>
+    <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-xl p-8 max-w-md mx-auto">
+      <h3 class="text-2xl font-bold mb-4">HeroKiddo 16' Purple Tropical</h3>
+      <div class="text-5xl font-bold text-blue-600 dark:text-blue-400 mb-4">$300</div>
+      <p class="text-gray-600 dark:text-gray-300 mb-6">8-hour rental</p>
+      <ul class="text-left space-y-3 mb-8">
+        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Delivery & setup included</li>
+        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Fully insured</li>
+        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Professional-grade equipment</li>
+        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 8-hour rental period</li>
+        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Pickup & breakdown</li>
+      </ul>
+      <a href="#contact" class="btn-primary w-full py-3 rounded-lg font-semibold">Reserve Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- About section -->
+<section id="about" class="max-w-6xl mx-auto px-4 py-24 scroll-mt-24">
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="fade-in">
+      <h2 class="text-4xl font-bold mb-6">About Westchester Water Rentals</h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+        We're Marcus and Will, two college students passionate about bringing epic water slide experiences to the Westchester area and beyond. What started as a fun idea has grown into a mission to create unforgettable memories for families, college events, and celebrations of all kinds.
+      </p>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">
+        Our commitment to safety, quality, and customer satisfaction sets us apart. Every rental includes professional setup, fully insured equipment, and our personal guarantee that your event will be a splash!
+      </p>
+      <div class="grid grid-cols-3 gap-4 text-center">
+        <div>
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">100%</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Insured</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Happy Events</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">5★</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Rating</div>
+        </div>
+      </div>
+    </div>
+    <div class="fade-in">
+      <img src="https://i.imgur.com/zepyQvg.jpeg" 
+           alt="About us - Water slide fun" 
+           class="rounded-xl shadow-xl w-full h-auto" 
+           width="600" 
+           height="400"
+           loading="lazy"
+           decoding="async" />
+    </div>
+  </div>
+</section>
+
+<!-- College section -->
+<section id="college" class="bg-gray-100 dark:bg-gray-800 py-24 px-4 scroll-mt-24">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl font-bold mb-4">Perfect for College Events</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300">Make your campus event the talk of the semester</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-4">Greek Life Events</h3>
+        <p class="text-gray-600 dark:text-gray-300">Perfect for rush events, mixers, and brotherhood/sisterhood activities. Create memorable experiences that bring your organization together.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-4">Residence Hall Programs</h3>
+        <p class="text-gray-600 dark:text-gray-300">Boost community engagement with exciting activities that get residents excited about campus life and build lasting friendships.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-4">End-of-Year Celebrations</h3>
+        <p class="text-gray-600 dark:text-gray-300">Celebrate academic achievements and the end of finals with an epic water slide party that everyone will remember.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ section -->
+<section id="faq" class="max-w-4xl mx-auto px-4 py-24 scroll-mt-24">
+  <div class="text-center mb-16 fade-in">
+    <h2 class="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+    <p class="text-xl text-gray-600 dark:text-gray-300">Everything you need to know about our water slide rentals</p>
+  </div>
+  <div class="space-y-8">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in">
+      <h3 class="text-xl font-bold mb-3">What's included in the rental?</h3>
+      <p class="text-gray-700 dark:text-gray-300">Every rental includes delivery, professional setup, the water slide for 8 hours, and pickup/breakdown. We also provide basic safety instructions and are fully insured.</p>
+    </div>
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in">
+      <h3 class="text-xl font-bold mb-3">How much space do I need?</h3>
+      <p class="text-gray-700 dark:text-gray-300">The HeroKiddo requires a 27'L x 9'W setup area, plus additional space for safe entry and exit. The area must be relatively flat and clear of sharp objects, trees, or overhead obstacles.</p>
+    </div>
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in">
+      <h3 class="text-xl font-bold mb-3">Do you provide water?</h3>
+      <p class="text-gray-700 dark:text-gray-300">You'll need access to a standard garden hose and water source. We bring all the necessary hoses and connections to set up the water system.</p>
+    </div>
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in">
+      <h3 class="text-xl font-bold mb-3">What if it rains?</h3>
+      <p class="text-gray-700 dark:text-gray-300">Safety first! We'll work with you to reschedule if weather conditions aren't suitable. We monitor weather forecasts and will contact you in advance if needed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact section -->
+<section id="contact" class="bg-gray-100 dark:bg-gray-800 py-24 px-4 scroll-mt-24">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="fade-in">
+      <h2 class="text-4xl font-bold mb-4">Ready to Book?</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">Get in touch and let's make your event unforgettable!</p>
+      <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+          <div class="space-y-3 text-left">
+            <div class="flex items-center">
+              <span class="font-semibold mr-2">Phone:</span>
+              <a href="tel:+12069547491" class="text-blue-600 dark:text-blue-400 hover:underline">+1-206-954-7491</a>
+            </div>
+            <div class="flex items-center">
+              <span class="font-semibold mr-2">Email:</span>
+              <a href="mailto:info@westchesterwaterrentals.com" class="text-blue-600 dark:text-blue-400 hover:underline">info@westchesterwaterrentals.com</a>
+            </div>
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">Service Area:</span>
+              <span>Westchester, CA and surrounding areas</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold mb-4">Quick Booking</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Call or text us with your event date, location, and any questions. We'll get back to you within a few hours!</p>
+          <a href="tel:+12069547491" class="btn-primary w-full py-3 rounded-lg font-semibold inline-block">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <img src="https://i.imgur.com/ieansQD.jpeg" 
+         alt="Westchester Water Rentals Logo" 
+         class="w-24 h-auto mx-auto mb-4" 
+         width="96" 
+         height="auto"
+         loading="lazy"
+         decoding="async">
+    <h3 class="text-2xl font-bold mb-2">Westchester Water Rentals</h3>
+    <p class="text-gray-400 mb-6">Making memories, one splash at a time</p>
+    <div class="flex justify-center space-x-6 text-sm text-gray-400">
+      <span>© 2024 Westchester Water Rentals</span>
+      <span>•</span>
+      <span>Marcus and Will</span>
+      <span>•</span>
+      <span>Fully Insured</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky Book Now Button for Mobile -->
+<a href="#contact" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 md:hidden btn-primary px-6 py-3 rounded shadow-lg z-50" aria-label="Book Now">
+  Book Now
+</a>
+
+<!-- Optimized JavaScript -->
+<script>
+  (function() {
+    'use strict';
+    
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    // Update theme toggle icon
+    function updateThemeIcon() {
+      const isDark = document.documentElement.classList.contains('dark');
+      themeToggle.textContent = isDark ? '☀️' : '🌙';
+    }
+    
+    updateThemeIcon();
+    
+    themeToggle.addEventListener('click', function() {
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+      updateThemeIcon();
+    });
+
+    // Intersection Observer for fade-in animations
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    
+    const appearOnScroll = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, appearOptions);
+    
+    faders.forEach(function(fader) {
+      appearOnScroll.observe(fader);
+    });
+
+    // Lazy loading enhancement
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    const imageObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.classList.add('loaded');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    
+    lazyImages.forEach(function(img) {
+      imageObserver.observe(img);
+    });
+
+    // Scroll-to-top button for mobile
+    const scrollBtn = document.createElement('button');
+    scrollBtn.innerHTML = '↑';
+    scrollBtn.className = 'fixed bottom-20 right-6 z-40 p-3 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 md:hidden opacity-0 transition-opacity';
+    scrollBtn.setAttribute('aria-label', 'Scroll to top');
+    scrollBtn.onclick = function() { 
+      window.scrollTo({ top: 0, behavior: 'smooth' }); 
+    };
+    document.body.appendChild(scrollBtn);
+
+    // Show/hide scroll button based on scroll position
+    let ticking = false;
+    function updateScrollButton() {
+      if (window.scrollY > 300) {
+        scrollBtn.style.opacity = '1';
+      } else {
+        scrollBtn.style.opacity = '0';
+      }
+      ticking = false;
+    }
+    
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollButton);
+        ticking = true;
+      }
+    });
+
+    // Preload critical images on interaction
+    let interacted = false;
+    function preloadImages() {
+      if (interacted) return;
+      interacted = true;
+      
+      const criticalImages = [
+        'https://i.imgur.com/EmMhcTo.jpeg',
+        'https://i.imgur.com/wynfB3d.jpeg'
+      ];
+      
+      criticalImages.forEach(function(src) {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+    }
+    
+    ['mousedown', 'touchstart'].forEach(function(event) {
+      document.addEventListener(event, preloadImages, { once: true });
+    });
+  })();
+</script>
+
+<!-- Google Analytics - deferred for performance -->
+<script>
+  window.addEventListener('load', function() {
+    // Load Google Analytics after page load
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+    document.head.appendChild(script);
+    
+    script.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    };
+  });
+</script>
+</body>
+</html>
